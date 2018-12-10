@@ -1,0 +1,6 @@
+framework module Pods_WLEmptyState_Tests {
+  umbrella header "Pods-WLEmptyState_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}
