@@ -1,0 +1,6 @@
+framework module WLEmptyState {
+  umbrella header "WLEmptyState-umbrella.h"
+
+  export *
+  module * { export * }
+}

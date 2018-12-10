@@ -1,0 +1,22 @@
+{
+  "name": "WLEmptyState",
+  "version": "0.1.0",
+  "summary": "A short description of WLEmptyState.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/lojals/WLEmptyState",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "lojals": "jroz9105@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/lojals/WLEmptyState.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "WLEmptyState/Classes/**/*"
+}
