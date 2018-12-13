@@ -1,27 +1,27 @@
 PODS:
-  - FBSnapshotTestCase (2.1.4):
-    - FBSnapshotTestCase/SwiftSupport (= 2.1.4)
-  - FBSnapshotTestCase/Core (2.1.4)
-  - FBSnapshotTestCase/SwiftSupport (2.1.4):
-    - FBSnapshotTestCase/Core
+  - iOSSnapshotTestCase (4.0.1):
+    - iOSSnapshotTestCase/SwiftSupport (= 4.0.1)
+  - iOSSnapshotTestCase/Core (4.0.1)
+  - iOSSnapshotTestCase/SwiftSupport (4.0.1):
+    - iOSSnapshotTestCase/Core
   - WLEmptyState (0.1.0)
 
 DEPENDENCIES:
-  - FBSnapshotTestCase (~> 2.1.4)
+  - iOSSnapshotTestCase
   - WLEmptyState (from `../`)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
-    - FBSnapshotTestCase
+    - iOSSnapshotTestCase
 
 EXTERNAL SOURCES:
   WLEmptyState:
     :path: "../"
 
 SPEC CHECKSUMS:
-  FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
-  WLEmptyState: c29e950985dbf73566486194e87b6b6b18a1078c
+  iOSSnapshotTestCase: f3b2b7e606fe03fdbe49af84316bd235df32dc44
+  WLEmptyState: 389d275d5a192bfcb0bbef03c62259614a4d6f1e
 
-PODFILE CHECKSUM: 445dd34a5d480c6d40ce2b057475d843042889fc
+PODFILE CHECKSUM: 5fd6a2332b7cd50dfecaf0807164322168c50c78
 
 COCOAPODS: 1.5.3
