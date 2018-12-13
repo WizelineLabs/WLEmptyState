@@ -72,6 +72,7 @@ public final class EmptyStateView: UIView {
         backgroundColor = .white
         
         addSubview(containerView)
+        
         containerView.addSubview(stackView)
         
         NSLayoutConstraint.activate([

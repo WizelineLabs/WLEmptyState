@@ -19,12 +19,18 @@ class SampleTableViewController: UITableViewController, WLEmptyStateDataSource, 
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 0
+        return 1
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 0
     }
 
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell") else {
+            fatalError()
+        }
+        return cell
+    }
 }
 

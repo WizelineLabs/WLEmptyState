@@ -38,11 +38,14 @@ extension UITableView {
     @objc private dynamic func swizzledReload() {
         self.swizzledReload()
         
-        if numberOfItems == 0 {
+        if numberOfItems == 0 && self.subviews.count > 1 {
             emptyStateView.titleLabel.attributedText = self.emptyStateDataSource?.titleForEmptyDataSet()
             emptyStateView.descriptionLabel.attributedText = self.emptyStateDataSource?.descriptionForEmptyDataSet()
             emptyStateView.image.image = self.emptyStateDataSource?.imageForEmptyDataSet()
+            
+//            insertSubview(emptyStateView, at: 0)
             addSubview(emptyStateView)
+            
         } else {
             removeEmptyView()
         }
@@ -93,7 +96,7 @@ extension UITableView {
         }
     }
     
-    public var emptyStateView: EmptyStateView {
+    var emptyStateView: EmptyStateView {
         get {
             guard let emptyStateView = objc_getAssociatedObject(self, &AssociatedKeys.emptyStateView) as? EmptyStateView else {
                 let emptyStateView = EmptyStateView(frame: .zero)
