@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-final class EmptyStateView: UIView {
+public final class EmptyStateView: UIView {
     
     private lazy var stackView: UIStackView = {
         let stackView = UIStackView(arrangedSubviews: [imageContainer, titleLabel, descriptionLabel])
@@ -34,20 +34,20 @@ final class EmptyStateView: UIView {
         return view
     }()
     
-    lazy var image: UIImageView = {
+    public lazy var image: UIImageView = {
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
         return image
     }()
     
-    lazy var titleLabel: UILabel = {
+    public lazy var titleLabel: UILabel = {
         let label = UILabel(frame: .zero)
         label.backgroundColor = .white
         label.textAlignment = .center
         return  label
     }()
     
-    lazy var descriptionLabel: UILabel = {
+    public lazy var descriptionLabel: UILabel = {
         let label = UILabel(frame: .zero)
         label.backgroundColor = .white
         label.numberOfLines = 0
@@ -55,18 +55,18 @@ final class EmptyStateView: UIView {
         return  label
     }()
     
-    override func layoutSubviews() {
+    override public func layoutSubviews() {
         super.layoutSubviews()
         stackView.frame = bounds
     }
     
-    lazy var containerView: UIView = {
+    public lazy var containerView: UIView = {
         let containerView = UIView(frame: .zero)
         containerView.translatesAutoresizingMaskIntoConstraints = false
         return  containerView
     }()
     
-    override init(frame: CGRect) {
+    override public init(frame: CGRect) {
         super.init(frame: frame)
         
         backgroundColor = .white
@@ -84,7 +84,7 @@ final class EmptyStateView: UIView {
             containerView.centerYAnchor.constraint(equalTo: self.centerYAnchor)])
     }
     
-    override func didMoveToSuperview() {
+    override public func didMoveToSuperview() {
         self.frame = self.superview?.bounds ?? .zero
     }
     

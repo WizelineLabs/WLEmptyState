@@ -1,5 +1,5 @@
 //
-//  EmptyStateDataSource.swift
+//  WLEmptyStateDataSource.swift
 //  WLEmptyState
 //
 //  Created by Jorge Ovalle on 12/6/18.
@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-protocol WLEmptyStateDataSource: class {
+public protocol WLEmptyStateDataSource: class {
     
     func imageForEmptyDataSet() -> UIImage?
     
@@ -19,7 +19,7 @@ protocol WLEmptyStateDataSource: class {
     
 }
 
-extension WLEmptyStateDataSource {
+public extension WLEmptyStateDataSource {
     
     func imageForEmptyDataSet() -> UIImage? {
         return UIImage(named: "Empty")

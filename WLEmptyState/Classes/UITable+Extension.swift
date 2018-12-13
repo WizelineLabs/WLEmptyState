@@ -9,8 +9,8 @@
 import Foundation
 import UIKit
 
-class WLEmptyState {
-    static func configure() {
+public class WLEmptyState {
+    public static func configure() {
         UITableView.configure()
     }
 }
@@ -69,7 +69,7 @@ extension UITableView {
         static var emptyStateView = "emptyStateView"
     }
 
-    weak var emptyStateDelegate: WLEmptyStateDelegate? {
+    public weak var emptyStateDelegate: WLEmptyStateDelegate? {
         get {
             return objc_getAssociatedObject(self, &AssociatedKeys.emptyStateDelegate) as? WLEmptyStateDelegate
         }
@@ -81,7 +81,7 @@ extension UITableView {
         }
     }
     
-    weak var emptyStateDataSource: WLEmptyStateDataSource? {
+    public weak var emptyStateDataSource: WLEmptyStateDataSource? {
         get {
             return objc_getAssociatedObject(self, &AssociatedKeys.emptyStateDataSource) as? WLEmptyStateDataSource
         }
@@ -93,7 +93,7 @@ extension UITableView {
         }
     }
     
-    var emptyStateView: EmptyStateView {
+    public var emptyStateView: EmptyStateView {
         get {
             guard let emptyStateView = objc_getAssociatedObject(self, &AssociatedKeys.emptyStateView) as? EmptyStateView else {
                 let emptyStateView = EmptyStateView(frame: .zero)
