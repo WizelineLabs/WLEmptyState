@@ -18,5 +18,10 @@
   "platforms": {
     "ios": "9.0"
   },
-  "source_files": "WLEmptyState/Classes/**/*"
+  "source_files": "WLEmptyState/Classes/**/*",
+  "resource_bundles": {
+    "WLEmptyState": [
+      "WLEmptyState/Assets/*.png"
+    ]
+  }
 }

@@ -1,5 +1,5 @@
 //
-//  EmptyStateDelegate.swift
+//  WLEmptyStateDelegate.swift
 //  WLEmptyState
 //
 //  Created by Jorge Ovalle on 12/6/18.
@@ -8,7 +8,8 @@
 
 import Foundation
 
-protocol WLEmptyStateDelegate: class {
+public protocol WLEmptyStateDelegate: class {
+    // TODO: Add more delegate functions 😅
     //emptyDataSetShouldAllowTouch
 }
 
