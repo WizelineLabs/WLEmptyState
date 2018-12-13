@@ -6,6 +6,6 @@ target 'WLEmptyState_Example' do
   target 'WLEmptyState_Tests' do
     inherit! :search_paths
 
-    pod 'FBSnapshotTestCase' , '~> 2.1.4'
+    pod 'iOSSnapshotTestCase'
   end
 end

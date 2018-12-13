@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  SampleTableViewController.swift
 //  WLEmptyState
 //
 //  Created by lojals on 12/10/2018.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class SampleTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
