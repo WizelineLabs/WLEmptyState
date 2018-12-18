@@ -89,6 +89,7 @@ public final class EmptyStateView: UIView {
         self.frame = self.superview?.bounds ?? .zero
     }
     
+    @available(*, unavailable)
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
