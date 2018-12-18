@@ -43,7 +43,6 @@ extension UITableView {
             emptyStateView.descriptionLabel.attributedText = self.emptyStateDataSource?.descriptionForEmptyDataSet()
             emptyStateView.image.image = self.emptyStateDataSource?.imageForEmptyDataSet()
             
-//            insertSubview(emptyStateView, at: 0)
             addSubview(emptyStateView)
             
         } else {
