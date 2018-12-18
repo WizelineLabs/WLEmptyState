@@ -34,20 +34,20 @@ public final class EmptyStateView: UIView {
         return view
     }()
     
-    public lazy var image: UIImageView = {
+    lazy var image: UIImageView = {
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
         return image
     }()
     
-    public lazy var titleLabel: UILabel = {
+    lazy var titleLabel: UILabel = {
         let label = UILabel(frame: .zero)
         label.backgroundColor = .white
         label.textAlignment = .center
         return  label
     }()
     
-    public lazy var descriptionLabel: UILabel = {
+    lazy var descriptionLabel: UILabel = {
         let label = UILabel(frame: .zero)
         label.backgroundColor = .white
         label.numberOfLines = 0
@@ -60,7 +60,7 @@ public final class EmptyStateView: UIView {
         stackView.frame = bounds
     }
     
-    public lazy var containerView: UIView = {
+    private lazy var containerView: UIView = {
         let containerView = UIView(frame: .zero)
         containerView.translatesAutoresizingMaskIntoConstraints = false
         return  containerView
