@@ -22,7 +22,7 @@ pod 'WLEmptyState'
 
 ## Author
 
-lojals, jroz9105@gmail.com
+lojals, jorge.ovalle@wizeline.com
 
 ## License
 
