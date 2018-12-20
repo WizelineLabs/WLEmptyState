@@ -1,22 +1,27 @@
 {
   "name": "WLEmptyState",
   "version": "0.1.0",
-  "summary": "A short description of WLEmptyState.",
-  "description": "TODO: Add long description of the pod here.",
+  "summary": "A control to display a place holder in case there's no data on a UITableView",
+  "description": "Empty State View",
   "homepage": "https://github.com/lojals/WLEmptyState",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
   },
   "authors": {
-    "lojals": "jroz9105@gmail.com"
+    "lojals": "jorge.ovalle@wizeline.com"
   },
   "source": {
-    "git": "https://github.com/lojals/WLEmptyState.git",
+    "git": "https://github.com/wizeline/WLEmptyState.git",
     "tag": "0.1.0"
   },
   "platforms": {
-    "ios": "8.0"
+    "ios": "9.0"
   },
-  "source_files": "WLEmptyState/Classes/**/*"
+  "source_files": "WLEmptyState/Classes/**/*",
+  "resource_bundles": {
+    "WLEmptyState": [
+      "WLEmptyState/Assets/*.png"
+    ]
+  }
 }
