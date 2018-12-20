@@ -9,15 +9,27 @@
 import Foundation
 import UIKit
 
+/// This protocol provides the table view object with the information it needs to construct and modify a `EmptyStateView`.
 public protocol WLEmptyStateDataSource: class {
     
+    /// Asks the data source for the description of the `EmptyStateView`.
+    ///
+    /// - Returns: An instance of UIImage as icon of the `EmptyStateView`.
     func imageForEmptyDataSet() -> UIImage?
     
+    /// Asks the data source for the title of the `EmptyStateView`.
+    ///
+    /// - Returns: The styled title for the empty view.
     func titleForEmptyDataSet() -> NSAttributedString
     
+    /// Asks the data source for the image of the `EmptyStateView`.
+    ///
+    /// - Returns: The styled description for the empty view.
     func descriptionForEmptyDataSet() -> NSAttributedString
     
 }
+
+// MARK: - WLEmptyStateDataSource Default
 
 public extension WLEmptyStateDataSource {
     

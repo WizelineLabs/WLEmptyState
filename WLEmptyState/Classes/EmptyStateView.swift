@@ -76,13 +76,13 @@ public final class EmptyStateView: UIView {
         containerView.addSubview(stackView)
         
         NSLayoutConstraint.activate([
-            containerView.widthAnchor.constraint(equalTo: stackView.widthAnchor, multiplier: 1),
-            containerView.heightAnchor.constraint(equalTo: stackView.heightAnchor, multiplier: 1),
-            stackView.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.8),
-            stackView.centerXAnchor.constraint(equalTo: self.centerXAnchor),
-            stackView.centerYAnchor.constraint(equalTo: self.centerYAnchor),
-            containerView.centerXAnchor.constraint(equalTo: self.centerXAnchor),
-            containerView.centerYAnchor.constraint(equalTo: self.centerYAnchor)])
+            containerView.widthAnchor.constraint(equalTo: stackView.widthAnchor),
+            containerView.heightAnchor.constraint(equalTo: stackView.heightAnchor),
+            stackView.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.8),
+            stackView.centerXAnchor.constraint(equalTo: centerXAnchor),
+            stackView.centerYAnchor.constraint(equalTo: centerYAnchor),
+            containerView.centerXAnchor.constraint(equalTo: centerXAnchor),
+            containerView.centerYAnchor.constraint(equalTo: centerYAnchor)])
     }
     
     override public func didMoveToSuperview() {

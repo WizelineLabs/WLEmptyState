@@ -1,7 +1,7 @@
 {
   "name": "WLEmptyState",
   "version": "0.1.0",
-  "summary": "A short description of WLEmptyState.",
+  "summary": "A control to display a place holder in case there's no data on a UITableView",
   "description": "Empty State View",
   "homepage": "https://github.com/lojals/WLEmptyState",
   "license": {
