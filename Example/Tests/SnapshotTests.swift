@@ -11,10 +11,18 @@ import FBSnapshotTestCase
 
 class SnapshotTests: FBSnapshotTestCase {
 
+    var sampleTableViewController: SampleTableViewController!
+
+    /// Turn on to save a new state of a view in a reference image
+    var isRecording: Bool {
+        return false
+    }
+
     override func setUp() {
         super.setUp()
-        //To save a new state of a view in a reference image, turn record mode on
-        //recordMode = true
+        recordMode = isRecording
+        sampleTableViewController = SampleTableViewController()
+        UIApplication.shared.keyWindow?.rootViewController = sampleTableViewController
     }
 
     override func tearDown() {
@@ -22,7 +30,6 @@ class SnapshotTests: FBSnapshotTestCase {
     }
 
     func testSampleTableViewControllerEmpty() {
-        let sampleTableViewController = SampleTableViewController()
         FBSnapshotVerifyView(sampleTableViewController.view)
     }
 
