@@ -13,7 +13,7 @@ class SnapshotTests: FBSnapshotTestCase {
 
     var sampleTableViewController: SampleTableViewController?
 
-    /// Turn on to save a new state of a view in a reference image
+    /// Turn on to record a reference image of the empty state of the view
     var isRecording: Bool {
         return false
     }
