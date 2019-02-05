@@ -11,7 +11,7 @@ import FBSnapshotTestCase
 
 class SnapshotTests: FBSnapshotTestCase {
 
-    var sampleTableViewController: SampleTableViewController!
+    var sampleTableViewController: SampleTableViewController?
 
     /// Turn on to save a new state of a view in a reference image
     var isRecording: Bool {
@@ -29,7 +29,11 @@ class SnapshotTests: FBSnapshotTestCase {
         super.tearDown()
     }
 
-    func testSampleTableViewControllerEmpty() {
+    func testEmptySampleTableViewController() {
+        guard let sampleTableViewController = sampleTableViewController else {
+            XCTFail("sampleTableViewController is nil, unable to perform snapshot test")
+            return
+        }
         FBSnapshotVerifyView(sampleTableViewController.view)
     }
 
