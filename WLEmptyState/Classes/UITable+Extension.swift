@@ -10,9 +10,12 @@ import Foundation
 import UIKit
 
 public class WLEmptyState {
+    
+    /// Calling `configure()` method is necessary to setup the WLEmptyState. It works by method swizzling the UITableView.
     public static func configure() {
         UITableView.configure()
     }
+    
 }
 
 extension UITableView {
@@ -23,6 +26,7 @@ extension UITableView {
         
         guard let originalMethod = class_getInstanceMethod(self, originalSelector),
             let swizzledMethod = class_getInstanceMethod(self, swizzledSelector) else {
+                Logger.logWarning("Didn't find selector to swizzle")
                 return
         }
         
@@ -71,6 +75,7 @@ extension UITableView {
         static var emptyStateView = "emptyStateView"
     }
 
+    /// The object that acts as the delegate of the empty state view.
     public weak var emptyStateDelegate: WLEmptyStateDelegate? {
         get {
             return objc_getAssociatedObject(self, &AssociatedKeys.emptyStateDelegate) as? WLEmptyStateDelegate
@@ -83,6 +88,7 @@ extension UITableView {
         }
     }
     
+    /// The object that acts as the data source of the empty state view.
     public weak var emptyStateDataSource: WLEmptyStateDataSource? {
         get {
             return objc_getAssociatedObject(self, &AssociatedKeys.emptyStateDataSource) as? WLEmptyStateDataSource
@@ -95,11 +101,12 @@ extension UITableView {
         }
     }
     
-    var emptyStateView: EmptyStateView {
+    private var emptyStateView: EmptyStateView {
         get {
             guard let emptyStateView = objc_getAssociatedObject(self, &AssociatedKeys.emptyStateView) as? EmptyStateView else {
                 let emptyStateView = EmptyStateView(frame: .zero)
                 self.emptyStateView = emptyStateView
+                Logger.logInfo("Empty view created")
                 return emptyStateView
             }
             return emptyStateView
