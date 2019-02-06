@@ -16,6 +16,7 @@ class SampleTableViewController: UITableViewController, WLEmptyStateDataSource, 
         
         tableView.emptyStateDelegate = self
         tableView.emptyStateDataSource = self
+        Logger.shared.logInfo("viewDidLoad")
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -27,7 +28,9 @@ class SampleTableViewController: UITableViewController, WLEmptyStateDataSource, 
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell") else {
+        Logger.shared.logTrace("Loading cell at index:", obj: indexPath)
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell2") else {
+            Logger.shared.logError("Couldn't get cell instance")
             fatalError()
         }
         return cell
