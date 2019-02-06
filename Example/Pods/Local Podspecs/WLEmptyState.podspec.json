@@ -24,7 +24,7 @@
   "source_files": "WLEmptyState/Classes/**/*",
   "resource_bundles": {
     "WLEmptyState": [
-      "WLEmptyState/Assets/*.png"
+      "WLEmptyState/Assets/Assets.xcassets"
     ]
   }
 }
