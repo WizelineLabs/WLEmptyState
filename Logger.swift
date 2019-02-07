@@ -7,7 +7,7 @@
 
 import Foundation
 
-public class Logger {
+final class Logger {
     
     /// Enum which maps an appropiate symbol which added as prefix for each log message
     ///
@@ -22,8 +22,6 @@ public class Logger {
         case error = "🔥"
     }
     
-    public static var shared = Logger()
-    
     private init() {}
     
     // MARK: - Loging methods
@@ -31,17 +29,17 @@ public class Logger {
     /// Wrapping Swift.debugPrint() within DEBUG flag
     ///
     /// - Parameters:
-    ///   - message: A closure that returns the object to be logged.
-    ///   - obj: Object or message to be logged
+    ///   - message: Object or message to be logged
+    ///   - obj: Object to be logged
     ///   - file: File name from where loggin to be done
     ///   - line: Line number in file from where the logging is done
     ///   - function: Name of the function from where the logging is done
     ///
-    private func debugPrint<T>(_ message: @autoclosure () -> T, level: LogEvent, obj: Any? = nil, _ file: String = #file, _ line: Int = #line, _ function: String = #function) {
+    private static func debugPrint<T>(_ message: T, level: LogEvent, obj: Any? = nil, _ file: String = #file, _ line: Int = #line, _ function: String = #function) {
         // Only allowing in DEBUG mode
         #if DEBUG
         let date = Date()
-        Swift.debugPrint("\(date) \(level.rawValue) \(message())")
+        Swift.debugPrint("\(date) \(level.rawValue) \(message)")
         
         if level == .error {
             Swift.debugPrint("\(date)    [\(shortenFile(file)), line: \(line) function: \(function)]")
@@ -58,7 +56,7 @@ public class Logger {
     ///
     /// - Parameter filePath: Full file path in bundle
     /// - Returns: Shorten File Name
-    private func shortenFile(_ file: String) -> String {
+    private static func shortenFile(_ file: String) -> String {
         let components = file.components(separatedBy: "/")
         let originalCount = components.count
         let newCount = min(3, components.count)
@@ -72,49 +70,49 @@ public class Logger {
     /// Logs trace verbosely on console with prefix [🔷]
     ///
     /// - Parameters:
-    ///   - message: A closure that returns the object to be logged.
-    ///   - obj: Object or message to be logged
+    ///   - message: Object or message to be logged
+    ///   - obj: Object to be logged
     ///   - file: File name from where loggin to be done
     ///   - line: Line number in file from where the logging is done
     ///   - function: Name of the function from where the logging is done
-    public func logTrace<T>(_ message: @autoclosure () -> T, obj: Any? = nil, _ file: String = #file, _ line: Int = #line, _ function: String = #function) {
-        self.debugPrint(message, level: .trace, obj: obj, file, line, function)
+    static func logTrace<T>(_ message: T, obj: Any? = nil, _ file: String = #file, _ line: Int = #line, _ function: String = #function) {
+        debugPrint(message, level: .trace, obj: obj, file, line, function)
     }
     
     /// Logs info verbosely on console with prefix [✅]
     ///
     /// - Parameters:
-    ///   - message: A closure that returns the object to be logged.
-    ///   - obj: Object or message to be logged
+    ///   - message: Object or message to be logged
+    ///   - obj: Object to be logged
     ///   - file: File name from where loggin to be done
     ///   - line: Line number in file from where the logging is done
     ///   - function: Name of the function from where the logging is done
-    public func logInfo<T>(_ message: @autoclosure () -> T, obj: Any? = nil, _ file: String = #file, _ line: Int = #line, _ function: String = #function) {
-        self.debugPrint(message, level: .info, obj: obj, file, line, function)
+    static func logInfo<T>(_ message: T, obj: Any? = nil, _ file: String = #file, _ line: Int = #line, _ function: String = #function) {
+        debugPrint(message, level: .info, obj: obj, file, line, function)
     }
     
     /// Logs warnings verbosely on console with prefix [⚠️]
     ///
     /// - Parameters:
-    ///   - message: A closure that returns the object to be logged.
-    ///   - obj: Object or message to be logged
+    ///   - message: Object or message to be logged
+    ///   - obj: Object to be logged
     ///   - file: File name from where loggin to be done
     ///   - line: Line number in file from where the logging is done
     ///   - function: Name of the function from where the logging is done
-    public func logWarning<T>(_ message: @autoclosure () -> T, obj: Any? = nil, _ file: String = #file, _ line: Int = #line, _ function: String = #function) {
-        self.debugPrint(message, level: .warning, obj: obj, file, line, function)
+    static func logWarning<T>(_ message: T, obj: Any? = nil, _ file: String = #file, _ line: Int = #line, _ function: String = #function) {
+        debugPrint(message, level: .warning, obj: obj, file, line, function)
     }
     
     /// Logs errors verbosely on console with prefix [🔥]
     ///
     /// - Parameters:
-    ///   - message: A closure that returns the object to be logged.
-    ///   - obj: Object or message to be logged
+    ///   - message: Object or message to be logged
+    ///   - obj: Object to be logged
     ///   - file: File name from where loggin to be done
     ///   - line: Line number in file from where the logging is done
     ///   - function: Name of the function from where the logging is done
-    public func logError<T>(_ message: @autoclosure () -> T, obj: Any? = nil, _ file: String = #file, _ line: Int = #line, _ function: String = #function) {
-        self.debugPrint(message, level: .error, obj: obj, file, line, function)
+    static func logError<T>(_ message: T, obj: Any? = nil, _ file: String = #file, _ line: Int = #line, _ function: String = #function) {
+        debugPrint(message, level: .error, obj: obj, file, line, function)
     }
 }
 
