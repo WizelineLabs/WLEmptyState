@@ -1,9 +1,9 @@
 {
   "name": "WLEmptyState",
   "version": "0.1.0",
-  "summary": "A control to display a place holder in case there's no data on a UITableView",
-  "description": "Empty State View",
-  "homepage": "https://github.com/lojals/WLEmptyState",
+  "summary": "Custom view for Empty states on tables",
+  "description": "A control to display a place holder in case there's no data on a UITableView",
+  "homepage": "https://github.com/wizeline/WLEmptyState",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
@@ -18,10 +18,13 @@
   "platforms": {
     "ios": "9.0"
   },
+  "pod_target_xcconfig": {
+    "SWIFT_VERSION": "4.0"
+  },
   "source_files": "WLEmptyState/Classes/**/*",
   "resource_bundles": {
     "WLEmptyState": [
-      "WLEmptyState/Assets/*.png"
+      "WLEmptyState/Assets/Assets.xcassets"
     ]
   }
 }
