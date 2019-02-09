@@ -23,6 +23,7 @@ extension UITableView {
         
         guard let originalMethod = class_getInstanceMethod(self, originalSelector),
             let swizzledMethod = class_getInstanceMethod(self, swizzledSelector) else {
+                Logger.logWarning("Didn't find selector to swizzle")
                 return
         }
         
@@ -100,6 +101,7 @@ extension UITableView {
             guard let emptyStateView = objc_getAssociatedObject(self, &AssociatedKeys.emptyStateView) as? EmptyStateView else {
                 let emptyStateView = EmptyStateView(frame: .zero)
                 self.emptyStateView = emptyStateView
+                Logger.logInfo("Empty view created")
                 return emptyStateView
             }
             return emptyStateView
