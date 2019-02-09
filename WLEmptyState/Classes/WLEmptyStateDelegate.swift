@@ -9,7 +9,7 @@
 import Foundation
 
 public protocol WLEmptyStateDelegate: class {
-    // TODO: Add more delegate functions 😅
+    // TODO: Add delegate functions 😅
     //emptyDataSetShouldAllowTouch
 }
 
