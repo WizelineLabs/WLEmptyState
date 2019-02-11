@@ -9,28 +9,13 @@
 import UIKit
 import WLEmptyState
 
-class SampleTableViewController: UITableViewController, WLEmptyStateDataSource, WLEmptyStateDelegate {
+final class SampleTableViewController: UITableViewController, WLEmptyStateDataSource {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        tableView.emptyStateDelegate = self
+
         tableView.emptyStateDataSource = self
     }
     
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-    
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
-    }
-
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell") else {
-            fatalError("Couldn't get cell instance")
-        }
-        return cell
-    }
 }
 
