@@ -24,12 +24,10 @@ To be able to use `WLEmptyState`, since this solution uses [Method Swizzling](ht
 ```Swift
 import WLEmptyState
 ...
-func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-
-WLEmptyState.configure()
-
-return true
-}
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        WLEmptyState.configure()
+        return true
+    }
 ```
 
 ## 3. Usage
@@ -38,11 +36,11 @@ Once you have configured `WLEmptyState`, you can use it for your `UITableViewCon
 ```Swift
 class YourTableViewController: UITableViewController, WLEmptyStateDataSource {
 
-override func viewDidLoad() {
-super.viewDidLoad()
+    override func viewDidLoad() {
+        super.viewDidLoad()
 
-tableView.emptyStateDataSource = self
-}
+        tableView.emptyStateDataSource = self
+    }
 
 }
 ```
@@ -56,23 +54,23 @@ If you want to customize the strings or the image, you can implement `WLEmptySta
 The image for the empty state view:
 ```Swift
 func imageForEmptyDataSet() -> UIImage? {
-return UIImage(named: "bubble_icon")
+    return UIImage(named: "bubble_icon")
 }
 ```
 
 The styled title for the empty state view:
 ```Swift
 func titleForEmptyDataSet() -> NSAttributedString {
-let title = NSAttributedString(string: "No messages", attributes: [NSAttributedString.Key.font: UIFont.preferredFont(forTextStyle: .headline)])
-return title
+    let title = NSAttributedString(string: "No messages", attributes: [NSAttributedString.Key.font: UIFont.preferredFont(forTextStyle: .headline)])
+    return title
 }
 ```
 
 The styled description for the empty state view:
 ```Swift
 func descriptionForEmptyDataSet() -> NSAttributedString {
-let title = NSAttributedString(string: "There's no messages to show.", attributes: [NSAttributedString.Key.font: UIFont.preferredFont(forTextStyle: .caption1)])
-return title
+    let title = NSAttributedString(string: "There's no messages to show.", attributes: [NSAttributedString.Key.font: UIFont.preferredFont(forTextStyle: .caption1)])
+    return title
 }
 ```
 <img src="https://user-images.githubusercontent.com/3466367/52595877-8fe6c500-2e14-11e9-85f3-2937746d4b24.png" width="300">
