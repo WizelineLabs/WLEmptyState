@@ -18,7 +18,7 @@ pod 'WLEmptyState'
 ```
 
 ## 2. Configuration
-To be able to use `WLEmptyState`, you'll have to import the module in the `AppDelegate Class` and call the static method `configure()` on `application(_ application:, didFinishLaunchingWithOptions:`) method.
+To be able to use `WLEmptyState`, since this solution uses [Method Swizzling](https://nshipster.com/method-swizzling/) in order setup the `UITableView` and load the initial values you have to import the module in the `AppDelegate Class` and call the static method `configure()` on `application(_ application:, didFinishLaunchingWithOptions:`) method.
 
 
 ```Swift
