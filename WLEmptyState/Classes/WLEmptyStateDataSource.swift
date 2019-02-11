@@ -34,7 +34,10 @@ public protocol WLEmptyStateDataSource: class {
 public extension WLEmptyStateDataSource {
     
     func imageForEmptyDataSet() -> UIImage? {
-        return UIImage(named: "Empty")
+        guard let url = (Bundle(for: WLEmptyState.self)).url(forResource: "WLEmptyState", withExtension: "bundle"),
+            let bundle = Bundle(url: url) else { return nil }
+        let image = UIImage(named: "Empty", in: bundle, compatibleWith: nil)
+        return image
     }
     
     func titleForEmptyDataSet() -> NSAttributedString {
