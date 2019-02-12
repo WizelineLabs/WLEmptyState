@@ -38,7 +38,6 @@ class YourTableViewController: UITableViewController, WLEmptyStateDataSource {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         tableView.emptyStateDataSource = self
     }
 
