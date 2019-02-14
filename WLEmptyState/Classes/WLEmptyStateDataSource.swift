@@ -46,7 +46,7 @@ public extension WLEmptyStateDataSource {
     }
     
     func descriptionForEmptyDataSet() -> NSAttributedString {
-        let title = NSAttributedString(string: "Oops There's no data.", attributes: [NSAttributedString.Key.font: UIFont.preferredFont(forTextStyle: .caption1)])
-        return title
+        let description = NSAttributedString(string: "Oops There's no data.", attributes: [NSAttributedString.Key.font: UIFont.preferredFont(forTextStyle: .caption1)])
+        return description
     }
 }
