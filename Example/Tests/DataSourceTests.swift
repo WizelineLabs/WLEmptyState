@@ -24,7 +24,6 @@ class DataSourceTests: XCTestCase {
         let descriptionDataSource = defaultTableViewController.tableView.emptyStateDataSource?.descriptionForEmptyDataSet()
         XCTAssertEqual(DefaultDataSource.description, descriptionDataSource)
         
-        
         guard let url = (Bundle(for: WLEmptyState.self)).url(forResource: "WLEmptyState", withExtension: "bundle"),
             let bundle = Bundle(url: url) else {
                 XCTFail("EmptyState image wasn't found.")
@@ -35,6 +34,7 @@ class DataSourceTests: XCTestCase {
         let imageDataSource = defaultTableViewController.tableView.emptyStateDataSource?.imageForEmptyDataSet()
         
         XCTAssertEqual(image, imageDataSource)
+        XCTAssertNotNil(imageDataSource)
     }
     
     func testCustomDataSetProperties() {
@@ -47,7 +47,6 @@ class DataSourceTests: XCTestCase {
         let description = NSAttributedString(string: "Test description")
         let descriptionDataSource = customTableViewController.tableView.emptyStateDataSource?.descriptionForEmptyDataSet()
         XCTAssertEqual(description, descriptionDataSource)
-        
         
         let imageDataSource = customTableViewController.tableView.emptyStateDataSource?.imageForEmptyDataSet()
         XCTAssertNil(imageDataSource)
