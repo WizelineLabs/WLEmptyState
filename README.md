@@ -28,13 +28,13 @@ To run the `Example` project:
 
     `git clone git@github.com:wizeline/WLEmptyState.git`
 
-2. Move to the `Example` directory and run:
+2. Move to the `Example` directory and run the following command:
 
     `pod install`
 
 ### Installing WLEmptyState
 
-WLEmptyState is available through [CocoaPods](https://cocoapods.org). To install it, add the following line to your Podfile:
+WLEmptyState is available through [CocoaPods](https://cocoapods.org). To install it, add the following command to your Podfile:
 
 ```ruby
 pod 'WLEmptyState'
@@ -46,7 +46,7 @@ The WLEmptyState component uses [Method Swizzling](https://nshipster.com/method-
 
 1. Import the module in the `AppDelegate` class by adding `import WLEmptyState`.
 
-2. Call the static method `configure()` on `application(_ application:, didFinishLaunchingWithOptions:`) method.
+2. Call the static method `configure()` on `application(_ application:, didFinishLaunchingWithOptions:)` method.
 
     Your `AppDelegate` class should look like this:
 
