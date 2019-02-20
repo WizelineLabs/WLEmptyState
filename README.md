@@ -18,7 +18,7 @@
 
 ## Overview
 
-WLEmptyState is an iOS based component that lets you customize the message when the dataset is empty. We created a sample project with the WLEmptyState component to show how you can use it.
+WLEmptyState is an iOS based component that lets you customize the message when the dataset of `UITableView` is empty. We created a sample project with the WLEmptyState component to show how you can use it.
 
 ## Running an Example Project
 
