@@ -1,4 +1,4 @@
-# WLEmptyState
+![Banner-WLEmptyState](https://user-images.githubusercontent.com/6756995/55449132-93cad400-5587-11e9-8abe-b77c79fa760a.png)
 
 [![Build Status](https://travis-ci.com/wizeline/predictive-listening.svg?token=x5gYJeA2Y1cf76HyTTzK&branch=develop)](https://travis-ci.com/wizeline/predictive-listening)
 [![Version](https://img.shields.io/cocoapods/v/WLEmptyState.svg?style=flat)](https://cocoapods.org/pods/WLEmptyState)
