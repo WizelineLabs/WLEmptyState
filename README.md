@@ -116,7 +116,7 @@ func descriptionForEmptyDataSet() -> NSAttributedString {
 
 ## Contributing to WLEmptyState
 
-We actively welcome your pull requests. We are trying to make contributing to this project as transparent and easy as possible, please read our [Contributing guideline](contributing.md) and follow the [Code of conduct](CODE_OF_CONDUCT.md).
+We actively welcome your pull requests. We are trying to make contributions to this project as transparent and accessible as possible, please read our [Contributing guidelines](contributing.md) and follow the [Code of conduct](CODE_OF_CONDUCT.md).
 If you face any problem with the code, please open an issue on GitHub.
 
 ## Author
