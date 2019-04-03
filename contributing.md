@@ -21,8 +21,8 @@ If you're new to Open Source or Swift, the Wizeline Open Source community is a g
 
 ### Opening a New Issue
 
-- Please check the [README of the specific project](specific-project-readme) to see if your question is answered there.
-- Search [open issues](specific-link-project) and [closed issues](specific-link-project) to avoid opening a duplicate issue.
+- Please check the [README](readme.md) to see if your question is answered there.
+- Search [open issues](https://github.com/wizeline/WLEmptyState/issues?q=is%3Aopen+is%3Aissue) and [closed issues](https://github.com/wizeline/WLEmptyState/issues?q=is%3Aissue+is%3Aclosed) to avoid opening a duplicate issue.
 - Avoiding duplicate issues organizes all relevant information for project maintainers and other users.
 - If no issues represent your problem, please open a new issue with a good title and useful description.
 
