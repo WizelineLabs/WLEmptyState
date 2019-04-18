@@ -1,14 +1,6 @@
-#
-# Be sure to run `pod lib lint WLEmptyState.podspec' to ensure this is a
-# valid spec before submitting.
-#
-# Any lines starting with a # are optional, but their use is encouraged
-# To learn more about a Podspec see https://guides.cocoapods.org/syntax/podspec.html
-#
-
 Pod::Spec.new do |s|
   s.name             = 'WLEmptyState'
-  s.version          = '0.1.0'
+  s.version          = '1.0.0'
   s.summary          = 'Custom view for Empty states on tables'
 
   s.description      = 'A control to display a place holder in case there\'s no data on a UITableView'
@@ -25,8 +17,4 @@ Pod::Spec.new do |s|
   s.resource_bundles = {
       'WLEmptyState' => ['WLEmptyState/Assets/Assets.xcassets']
   }
-
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
 end
