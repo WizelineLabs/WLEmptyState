@@ -13,10 +13,10 @@
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
+		617E960222724CCC006F6025 /* SampleCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617E960122724CCC006F6025 /* SampleCollectionViewController.swift */; };
 		7A60354D2214DB2B000265EC /* DataSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A60354C2214DB2B000265EC /* DataSourceTests.swift */; };
 		7A6035502214DC7E000265EC /* Mocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A60354E2214DBBF000265EC /* Mocks.swift */; };
 		A2D832CF21F965BE00C39001 /* SnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D832CE21F965BE00C39001 /* SnapshotTests.swift */; };
-		A2D832D321F9788900C39001 /* SampleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* SampleTableViewController.swift */; };
 		D1B6CC7AF3E1EC8EF12A6340 /* Pods_WLEmptyState_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0424AD21D7FF86F64DF8F8C3 /* Pods_WLEmptyState_Example.framework */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +42,7 @@
 		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		607FACE51AFB9204008FA782 /* WLEmptyState_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WLEmptyState_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		617E960122724CCC006F6025 /* SampleCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleCollectionViewController.swift; sourceTree = "<group>"; };
 		7A60354C2214DB2B000265EC /* DataSourceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSourceTests.swift; sourceTree = "<group>"; };
 		7A60354E2214DBBF000265EC /* Mocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mocks.swift; sourceTree = "<group>"; };
 		84DAF8E07A8ECD21288C5213 /* WLEmptyState.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = WLEmptyState.podspec; path = ../WLEmptyState.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
@@ -120,6 +121,7 @@
 			children = (
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* SampleTableViewController.swift */,
+				617E960122724CCC006F6025 /* SampleCollectionViewController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
@@ -234,6 +236,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -321,7 +324,7 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-WLEmptyState_Tests/Pods-WLEmptyState_Tests-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-WLEmptyState_Tests/Pods-WLEmptyState_Tests-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/iOSSnapshotTestCase/FBSnapshotTestCase.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -332,7 +335,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WLEmptyState_Tests/Pods-WLEmptyState_Tests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WLEmptyState_Tests/Pods-WLEmptyState_Tests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		C50B708502787E6D67177F5B /* [CP] Embed Pods Frameworks */ = {
@@ -343,7 +346,7 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-WLEmptyState_Example/Pods-WLEmptyState_Example-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-WLEmptyState_Example/Pods-WLEmptyState_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/WLEmptyState/WLEmptyState.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -354,7 +357,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WLEmptyState_Example/Pods-WLEmptyState_Example-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WLEmptyState_Example/Pods-WLEmptyState_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -365,6 +368,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				607FACD81AFB9204008FA782 /* SampleTableViewController.swift in Sources */,
+				617E960222724CCC006F6025 /* SampleCollectionViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -375,7 +379,6 @@
 			files = (
 				A2D832CF21F965BE00C39001 /* SnapshotTests.swift in Sources */,
 				7A60354D2214DB2B000265EC /* DataSourceTests.swift in Sources */,
-				A2D832D321F9788900C39001 /* SampleTableViewController.swift in Sources */,
 				7A6035502214DC7E000265EC /* Mocks.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -545,6 +548,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 378A4E02DED51B984ECF26A5 /* Pods-WLEmptyState_Tests.debug.xcconfig */;
 			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -566,6 +570,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C17EEE976E18F57387F6427C /* Pods-WLEmptyState_Tests.release.xcconfig */;
 			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
