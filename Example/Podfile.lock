@@ -4,7 +4,7 @@ PODS:
   - iOSSnapshotTestCase/Core (4.0.1)
   - iOSSnapshotTestCase/SwiftSupport (4.0.1):
     - iOSSnapshotTestCase/Core
-  - WLEmptyState (0.1.0)
+  - WLEmptyState (1.0.0)
 
 DEPENDENCIES:
   - iOSSnapshotTestCase
@@ -20,8 +20,8 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   iOSSnapshotTestCase: f3b2b7e606fe03fdbe49af84316bd235df32dc44
-  WLEmptyState: 4e90ffccc2f641d65de508c4913fab959460cc53
+  WLEmptyState: 735f745997483a2e9fe420b2265b276ff68be5ce
 
 PODFILE CHECKSUM: 5fd6a2332b7cd50dfecaf0807164322168c50c78
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.6.1

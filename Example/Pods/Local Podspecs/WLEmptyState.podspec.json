@@ -1,6 +1,6 @@
 {
   "name": "WLEmptyState",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "summary": "Custom view for Empty states on tables",
   "description": "A control to display a place holder in case there's no data on a UITableView",
   "homepage": "https://github.com/wizeline/WLEmptyState",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/wizeline/WLEmptyState.git",
-    "tag": "0.1.0"
+    "tag": "1.0.0"
   },
   "platforms": {
     "ios": "9.0"

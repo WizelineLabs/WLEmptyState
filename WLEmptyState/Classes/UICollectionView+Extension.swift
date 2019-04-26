@@ -51,7 +51,7 @@ extension UICollectionView: WLEmptyStateProtocol {
             emptyStateView.descriptionLabel.attributedText = self.emptyStateDataSource?.descriptionForEmptyDataSet()
             emptyStateView.image.image = self.emptyStateDataSource?.imageForEmptyDataSet()
             
-            addSubview(emptyStateView)
+            backgroundView = emptyStateView
             
         } else {
             removeEmptyView()
