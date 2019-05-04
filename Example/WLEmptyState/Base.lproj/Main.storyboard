@@ -12,9 +12,8 @@
         <!--Table-->
         <scene sceneID="QAP-XW-o4o">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Gvx-c2-cgX" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController id="hSg-os-U1J" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Table" id="LvC-27-oC7"/>
+                    <tabBarItem key="tabBarItem" title="Table" image="list_icon" id="LvC-27-oC7"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="qHa-Ae-WlE">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -23,6 +22,7 @@
                         <segue destination="WZB-vg-oVd" kind="relationship" relationship="rootViewController" id="2Ak-Bz-BN8"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gvx-c2-cgX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1079" y="-288"/>
         </scene>
@@ -77,7 +77,7 @@
         <scene sceneID="zrt-VH-kKm">
             <objects>
                 <navigationController id="Rg1-Wo-AVA" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Collection" id="i8L-Gv-OPL"/>
+                    <tabBarItem key="tabBarItem" title="Collection" image="grid_icon" id="i8L-Gv-OPL"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="om1-cd-YEB">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -126,4 +126,8 @@
             <point key="canvasLocation" x="-231" y="430"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="grid_icon" width="40" height="40"/>
+        <image name="list_icon" width="40" height="40"/>
+    </resources>
 </document>
