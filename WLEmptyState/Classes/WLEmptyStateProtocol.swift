@@ -72,11 +72,5 @@ extension WLEmptyStateProtocol where Self: UICollectionView {
         }
         return items
     }
-}
-
-
-protocol X {
-    var numberOfItems: Int { get }
     
-    func reload()
 }
