@@ -2,7 +2,7 @@
 //  SampleCollectionViewController.swift
 //  WLEmptyState_Example
 //
-//  Created by Abel Martinez  on 4/25/19.
+//  Created by Abel Martinez on 4/25/19.
 //
 
 import UIKit
