@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-public final class EmptyStateView: UIView {
+final class EmptyStateView: UIView {
     
     private lazy var stackView: UIStackView = {
         let stackView = UIStackView(arrangedSubviews: [imageContainer, titleLabel, descriptionLabel])
