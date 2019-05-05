@@ -282,9 +282,9 @@
 		7A53B066227E3F21007718E3 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				2EC2DBFE0B4A79256984205A7B7EB67F /* WLEmptyStateProtocol.swift */,
-				E289C4880509BE9D93B3C163B4FED90D /* WLEmptyStateDelegate.swift */,
 				6AAF8EA22B378C2A9E6F9EEB0D4C93B0 /* WLEmptyStateDataSource.swift */,
+				E289C4880509BE9D93B3C163B4FED90D /* WLEmptyStateDelegate.swift */,
+				2EC2DBFE0B4A79256984205A7B7EB67F /* WLEmptyStateProtocol.swift */,
 			);
 			name = Protocols;
 			sourceTree = "<group>";
@@ -292,8 +292,8 @@
 		7A53B067227E3F29007718E3 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				71F567BD69A197F072B809E34FF4953B /* UITableView+Extension.swift */,
 				E04D396C6F7CBB2473CEC5F917929658 /* UICollectionView+Extension.swift */,
+				71F567BD69A197F072B809E34FF4953B /* UITableView+Extension.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -301,8 +301,8 @@
 		7A53B068227E3F30007718E3 /* Misc */ = {
 			isa = PBXGroup;
 			children = (
-				0031670B7286D1940D61AD1EF7A79EB0 /* Swizzler.swift */,
 				FB3CC010DEAF48813C8A2CB76CC46AEA /* Logger.swift */,
+				0031670B7286D1940D61AD1EF7A79EB0 /* Swizzler.swift */,
 			);
 			name = Misc;
 			sourceTree = "<group>";
@@ -352,11 +352,11 @@
 		B736E5704FF6EC2EB575DF8F692B11C7 /* WLEmptyState */ = {
 			isa = PBXGroup;
 			children = (
-				7A53B068227E3F30007718E3 /* Misc */,
 				7A53B067227E3F29007718E3 /* Extensions */,
+				7A53B068227E3F30007718E3 /* Misc */,
+				6717F5D86539AEEDFCA8B7AE0A57A6C2 /* Pod */,
 				7A53B066227E3F21007718E3 /* Protocols */,
 				7A53B065227E3F19007718E3 /* Views */,
-				6717F5D86539AEEDFCA8B7AE0A57A6C2 /* Pod */,
 				A0DDB5468C4F0CA37762DD91A74B096C /* Resources */,
 				641463B1DFDC3540BB09CC081A9DF89F /* Support Files */,
 			);
