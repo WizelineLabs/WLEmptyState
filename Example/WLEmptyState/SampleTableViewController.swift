@@ -13,7 +13,6 @@ final class SampleTableViewController: UITableViewController, WLEmptyStateDataSo
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         tableView.emptyStateDataSource = self
     }
     
