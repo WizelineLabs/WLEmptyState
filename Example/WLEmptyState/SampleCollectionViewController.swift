@@ -15,8 +15,4 @@ final class SampleCollectionViewController: UICollectionViewController, WLEmptyS
         collectionView.backgroundColor = .white
         collectionView.emptyStateDataSource = self
     }
-    
-    func titleForEmptyDataSet() -> NSAttributedString {
-        return NSAttributedString(string: "Empty Cosito")
-    }
 }
