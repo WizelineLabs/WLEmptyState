@@ -29,7 +29,7 @@
         <!--Sample Table View Controller-->
         <scene sceneID="sVF-SJ-Acz">
             <objects>
-                <tableViewController id="WZB-vg-oVd" customClass="SampleTableViewController" customModule="WLEmptyState_Example" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="SampleTableViewController" id="WZB-vg-oVd" customClass="SampleTableViewController" customModule="WLEmptyState_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="axo-SU-a8F">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -93,7 +93,7 @@
         <!--Sample Collection View Controller-->
         <scene sceneID="IdS-hJ-KJj">
             <objects>
-                <collectionViewController id="AkJ-qS-w7B" customClass="SampleCollectionViewController" customModule="WLEmptyState_Example" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController storyboardIdentifier="SampleCollectionViewController" id="AkJ-qS-w7B" customClass="SampleCollectionViewController" customModule="WLEmptyState_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="0qw-Oj-kv0">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

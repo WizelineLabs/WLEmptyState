@@ -14,6 +14,7 @@
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		617E960222724CCC006F6025 /* SampleCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617E960122724CCC006F6025 /* SampleCollectionViewController.swift */; };
+		7A53B06A227F76C1007718E3 /* UIViewController+Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A53B069227F76C1007718E3 /* UIViewController+Storyboard.swift */; };
 		7A60354D2214DB2B000265EC /* DataSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A60354C2214DB2B000265EC /* DataSourceTests.swift */; };
 		7A6035502214DC7E000265EC /* Mocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A60354E2214DBBF000265EC /* Mocks.swift */; };
 		A2D832CF21F965BE00C39001 /* SnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D832CE21F965BE00C39001 /* SnapshotTests.swift */; };
@@ -43,6 +44,7 @@
 		607FACE51AFB9204008FA782 /* WLEmptyState_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WLEmptyState_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		617E960122724CCC006F6025 /* SampleCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleCollectionViewController.swift; sourceTree = "<group>"; };
+		7A53B069227F76C1007718E3 /* UIViewController+Storyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Storyboard.swift"; sourceTree = "<group>"; };
 		7A60354C2214DB2B000265EC /* DataSourceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSourceTests.swift; sourceTree = "<group>"; };
 		7A60354E2214DBBF000265EC /* Mocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mocks.swift; sourceTree = "<group>"; };
 		84DAF8E07A8ECD21288C5213 /* WLEmptyState.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = WLEmptyState.podspec; path = ../WLEmptyState.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
@@ -146,6 +148,7 @@
 				A2D832CE21F965BE00C39001 /* SnapshotTests.swift */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
 				7A60354E2214DBBF000265EC /* Mocks.swift */,
+				7A53B069227F76C1007718E3 /* UIViewController+Storyboard.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -380,6 +383,7 @@
 				A2D832CF21F965BE00C39001 /* SnapshotTests.swift in Sources */,
 				7A60354D2214DB2B000265EC /* DataSourceTests.swift in Sources */,
 				7A6035502214DC7E000265EC /* Mocks.swift in Sources */,
+				7A53B06A227F76C1007718E3 /* UIViewController+Storyboard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

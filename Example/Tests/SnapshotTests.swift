@@ -13,6 +13,7 @@ class SnapshotTests: FBSnapshotTestCase {
     
     var sampleTableViewController: SampleTableViewController?
     var sampleCollectionViewController: SampleCollectionViewController?
+    
     /// Turn on to record a reference image of the empty state of the view
     var isRecording: Bool {
         return false
@@ -21,8 +22,9 @@ class SnapshotTests: FBSnapshotTestCase {
     override func setUp() {
         super.setUp()
         recordMode = isRecording
-        sampleTableViewController = SampleTableViewController()
-        sampleCollectionViewController = SampleCollectionViewController(collectionViewLayout: UICollectionViewFlowLayout())
+        
+        sampleTableViewController = UIViewController.instanciate(type: SampleTableViewController.self)
+        sampleCollectionViewController = UIViewController.instanciate(type: SampleCollectionViewController.self)
     }
     
     override func tearDown() {

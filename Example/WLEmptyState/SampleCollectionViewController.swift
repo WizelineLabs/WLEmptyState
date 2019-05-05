@@ -14,5 +14,6 @@ final class SampleCollectionViewController: UICollectionViewController, WLEmptyS
         super.viewDidLoad()
         collectionView.backgroundColor = .white
         collectionView.emptyStateDataSource = self
+        collectionView.reloadData()
     }
 }
