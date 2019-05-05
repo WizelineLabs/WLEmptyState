@@ -9,7 +9,7 @@ import Foundation
 
 struct Swizzler {
     
-    internal static func swizzleMethods(for sourceClass: AnyClass?, originalSelector: Selector, swizzledSelector: Selector) {
+    static func swizzleMethods(for sourceClass: AnyClass?, originalSelector: Selector, swizzledSelector: Selector) {
         guard let originalMethod = class_getInstanceMethod(sourceClass, originalSelector),
             let swizzledMethod = class_getInstanceMethod(sourceClass, swizzledSelector) else {
                 Logger.logWarning("Didn't find selector to swizzle")

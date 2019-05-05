@@ -9,17 +9,6 @@
 import Foundation
 import UIKit
 
-public class WLEmptyState {
-    
-    /// Calling `configure()` method is necessary to setup the WLEmptyState. It works by method swizzling the UITableView.
-    public static func configure() {
-        
-        UICollectionView.configure()
-        UITableView.configure()
-    }
-    
-}
-
 extension UITableView: WLEmptyStateProtocol {
     
     static func configure() {
