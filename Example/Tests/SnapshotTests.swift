@@ -7,10 +7,12 @@
 //
 import XCTest
 import FBSnapshotTestCase
+@testable import WLEmptyState_Example
 
 class SnapshotTests: FBSnapshotTestCase {
     
     var sampleTableViewController: SampleTableViewController?
+    var sampleCollectionViewController: SampleCollectionViewController?
     
     /// Turn on to record a reference image of the empty state of the view
     var isRecording: Bool {
@@ -20,8 +22,9 @@ class SnapshotTests: FBSnapshotTestCase {
     override func setUp() {
         super.setUp()
         recordMode = isRecording
-        sampleTableViewController = SampleTableViewController()
-        UIApplication.shared.keyWindow?.rootViewController = sampleTableViewController
+        
+        sampleTableViewController = UIViewController.instanciate(type: SampleTableViewController.self)
+        sampleCollectionViewController = UIViewController.instanciate(type: SampleCollectionViewController.self)
     }
     
     override func tearDown() {
@@ -29,11 +32,21 @@ class SnapshotTests: FBSnapshotTestCase {
     }
     
     func testEmptySampleTableViewController() {
+        UIApplication.shared.keyWindow?.rootViewController = sampleTableViewController
         guard let sampleTableViewController = sampleTableViewController else {
             XCTFail("sampleTableViewController is nil, unable to perform snapshot test")
             return
         }
         FBSnapshotVerifyView(sampleTableViewController.view)
+    }
+    
+    func testEmptySampleCollectionViewController() {
+        UIApplication.shared.keyWindow?.rootViewController = sampleCollectionViewController
+        guard let sampleCollectionViewController = sampleCollectionViewController else {
+            XCTFail("sampleCollectionViewController is nil, unable to perform snapshot test")
+            return
+        }
+        FBSnapshotVerifyView(sampleCollectionViewController.view)
     }
     
 }
