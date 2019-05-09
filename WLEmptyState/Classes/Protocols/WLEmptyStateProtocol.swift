@@ -53,7 +53,7 @@ extension WLEmptyStateProtocol where Self: UITableView {
     
     var numberOfItems: Int {
         var items = 0
-        let numberOfSections = dataSource?.numberOfSections?(in: self) ?? 0
+        let numberOfSections = dataSource?.numberOfSections?(in: self) ?? 1
         for section in 0..<numberOfSections {
             items += dataSource?.tableView(self, numberOfRowsInSection: section) ?? 0
         }
@@ -66,7 +66,7 @@ extension WLEmptyStateProtocol where Self: UICollectionView {
     
     var numberOfItems: Int {
         var items = 0
-        let numberOfSections = dataSource?.numberOfSections?(in: self) ?? 0
+        let numberOfSections = dataSource?.numberOfSections?(in: self) ?? 1
         for section in 0..<numberOfSections {
             items += dataSource?.collectionView(self, numberOfItemsInSection: section) ?? 0
         }
