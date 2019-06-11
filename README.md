@@ -17,7 +17,7 @@
 
 ## Overview
 
-WLEmptyState is an iOS based component that lets you customize the message when the dataset of `UITableView` is empty. We created a sample project with the WLEmptyState component to show how you can use it.
+WLEmptyState is an iOS based component that lets you customize the message when the dataset of `UITableView` or `UICollectionView` is empty. We created a sample project with the WLEmptyState component to show how you can use it.
 
 ## Running an Example Project
 
@@ -60,7 +60,7 @@ The WLEmptyState component uses [Method Swizzling](https://nshipster.com/method-
 
 ### Using WLEmptyState
 
-Once you have configured `WLEmptyState`, you can use it for your `UITableViewController`. You need to conform the `WLEmptyStateDataSource` protocol. For example,
+Once you have configured `WLEmptyState`, you can use it for your `UITableViewController` or `UICollectionViewController`. You need to conform the `WLEmptyStateDataSource` protocol. For example,
 
 ```Swift
 class YourTableViewController: UITableViewController, WLEmptyStateDataSource {
@@ -73,7 +73,7 @@ class YourTableViewController: UITableViewController, WLEmptyStateDataSource {
 }
 ```
 
-After you run your project with an empty dataset for a table, you'll be able to see a default `WLEmptyState` view.
+After you run your project with an empty dataset for your entity, you'll be able to see a default `WLEmptyState` view.
 
 **Default Image**
 
