@@ -1,9 +1,9 @@
 Pod::Spec.new do |s|
   s.name             = 'WLEmptyState'
   s.version          = '1.0.2'
-  s.summary          = 'Custom view for Empty states on tables'
+  s.summary          = 'Custom view for Empty states on tables or collection entities'
 
-  s.description      = 'A control to display a place holder in case there\'s no data on a UITableView'
+  s.description      = 'A control to display a place holder in case there\'s no data on a UITableView or UICollectionView'
   s.homepage         = 'https://github.com/wizeline/WLEmptyState'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Wizeline iOS Team' => 'ios.open@wizeline.com' }
