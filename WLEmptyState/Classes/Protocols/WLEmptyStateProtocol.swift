@@ -47,30 +47,23 @@ extension WLEmptyStateProtocol {
             objc_setAssociatedObject(self, &AssociatedKeys.emptyStateView, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
         }
     }
-}
-
-extension WLEmptyStateProtocol where Self: UITableView {
     
     var numberOfItems: Int {
         var items = 0
-        let numberOfSections = dataSource?.numberOfSections?(in: self) ?? 1
+        let numberOfSections = getNumberOfSections()
         for section in 0..<numberOfSections {
-            items += dataSource?.tableView(self, numberOfRowsInSection: section) ?? 0
+            items += getNumberOfItems(in: section)
         }
         return items
     }
     
-}
-
-extension WLEmptyStateProtocol where Self: UICollectionView {
-    
-    var numberOfItems: Int {
-        var items = 0
-        let numberOfSections = dataSource?.numberOfSections?(in: self) ?? 1
-        for section in 0..<numberOfSections {
-            items += dataSource?.collectionView(self, numberOfItemsInSection: section) ?? 0
-        }
-        return items
+    private func getNumberOfSections() -> Int {
+        return (self as? UITableView).flatMap { $0.dataSource?.numberOfSections?(in: $0) } ??
+            (self as? UICollectionView).flatMap { $0.dataSource?.numberOfSections?(in: $0) } ?? 1
     }
     
+    private func getNumberOfItems(in section: Int) -> Int {
+        return (self as? UITableView).flatMap { $0.dataSource?.tableView($0, numberOfRowsInSection: section) } ??
+            (self as? UICollectionView).flatMap { $0.dataSource?.collectionView($0, numberOfItemsInSection: section) } ?? 1
+    }
 }
