@@ -1,5 +1,5 @@
 //
-//  Mocks.swift
+//  UITableViewMocks.swift
 //  WLEmptyState_Example
 //
 //  Created by Jorge Ovalle on 2/13/19.
