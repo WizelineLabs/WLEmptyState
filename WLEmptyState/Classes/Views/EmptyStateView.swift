@@ -86,6 +86,7 @@ final class EmptyStateView: UIView {
     }
     
     override public func didMoveToSuperview() {
+        super.didMoveToSuperview()
         self.frame = self.superview?.bounds ?? .zero
     }
     
