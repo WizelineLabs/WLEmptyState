@@ -3,7 +3,6 @@
 //  WLEmptyState_Example
 //
 //  Created by Jorge Ovalle on 2/13/19.
-//  Copyright © 2019 CocoaPods. All rights reserved.
 //
 
 import Foundation
@@ -46,4 +45,12 @@ enum DefaultDataSource {
     
     static let description = NSAttributedString(string: "Oops There's no data.",
                                                 attributes: [NSAttributedString.Key.font: UIFont.preferredFont(forTextStyle: .caption1)])
+    
+    static let image: UIImage? = {
+        guard let url = (Bundle(for: WLEmptyState.self)).url(forResource: "WLEmptyState", withExtension: "bundle"),
+            let bundle = Bundle(url: url) else {
+                return nil
+        }
+        return UIImage(named: "Empty", in: bundle, compatibleWith: nil)
+    }()
 }

@@ -14,7 +14,7 @@
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		617E960222724CCC006F6025 /* SampleCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617E960122724CCC006F6025 /* SampleCollectionViewController.swift */; };
-		7A3CAFE422C592F100F6FD40 /* UICollectionViewMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3CAFE322C592F100F6FD40 /* UICollectionViewMocks.swift */; };
+		7A05C45B22C6B65D001AAD97 /* UICollectionViewMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3CAFE322C592F100F6FD40 /* UICollectionViewMocks.swift */; };
 		7A53B06A227F76C1007718E3 /* UIViewController+Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A53B069227F76C1007718E3 /* UIViewController+Storyboard.swift */; };
 		7A60354D2214DB2B000265EC /* DataSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A60354C2214DB2B000265EC /* DataSourceTests.swift */; };
 		7A6035502214DC7E000265EC /* UITableViewMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A60354E2214DBBF000265EC /* UITableViewMocks.swift */; };
@@ -381,7 +381,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7A3CAFE422C592F100F6FD40 /* UICollectionViewMocks.swift in Sources */,
 				607FACD81AFB9204008FA782 /* SampleTableViewController.swift in Sources */,
 				617E960222724CCC006F6025 /* SampleCollectionViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
@@ -394,6 +393,7 @@
 			files = (
 				A2D832CF21F965BE00C39001 /* SnapshotTests.swift in Sources */,
 				7A60354D2214DB2B000265EC /* DataSourceTests.swift in Sources */,
+				7A05C45B22C6B65D001AAD97 /* UICollectionViewMocks.swift in Sources */,
 				7A6035502214DC7E000265EC /* UITableViewMocks.swift in Sources */,
 				7A53B06A227F76C1007718E3 /* UIViewController+Storyboard.swift in Sources */,
 			);

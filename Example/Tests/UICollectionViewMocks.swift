@@ -3,7 +3,6 @@
 //  WLEmptyState_Example
 //
 //  Created by Jorge Ovalle on 6/27/19.
-//  Copyright © 2019 CocoaPods. All rights reserved.
 //
 
 import Foundation
@@ -38,12 +37,4 @@ class CustomCollectionViewController: UICollectionViewController, WLEmptyStateDa
     func imageForEmptyDataSet() -> UIImage? {
         return nil
     }
-}
-
-enum DefaultDataSource {
-    static let title = NSAttributedString(string: "Empty DataSet",
-                                          attributes: [NSAttributedString.Key.font: UIFont.preferredFont(forTextStyle: .headline)])
-    
-    static let description = NSAttributedString(string: "Oops There's no data.",
-                                                attributes: [NSAttributedString.Key.font: UIFont.preferredFont(forTextStyle: .caption1)])
 }
