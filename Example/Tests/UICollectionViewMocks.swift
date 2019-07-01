@@ -8,7 +8,7 @@
 import Foundation
 import WLEmptyState
 
-class DefaultCollectionViewController: UICollectionViewController, WLEmptyStateDataSource {
+final class DefaultCollectionViewController: UICollectionViewController, WLEmptyStateDataSource {
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,7 +18,7 @@ class DefaultCollectionViewController: UICollectionViewController, WLEmptyStateD
     
 }
 
-class CustomCollectionViewController: UICollectionViewController, WLEmptyStateDataSource {
+final class CustomCollectionViewController: UICollectionViewController, WLEmptyStateDataSource {
     
     override func viewDidLoad() {
         super.viewDidLoad()

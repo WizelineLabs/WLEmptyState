@@ -8,7 +8,7 @@
 import Foundation
 import WLEmptyState
 
-class DefaultTableViewController: UITableViewController, WLEmptyStateDataSource {
+final class DefaultTableViewController: UITableViewController, WLEmptyStateDataSource {
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,7 +18,7 @@ class DefaultTableViewController: UITableViewController, WLEmptyStateDataSource 
     
 }
 
-class CustomTableViewController: UITableViewController, WLEmptyStateDataSource {
+final class CustomTableViewController: UITableViewController, WLEmptyStateDataSource {
     
     override func viewDidLoad() {
         super.viewDidLoad()
