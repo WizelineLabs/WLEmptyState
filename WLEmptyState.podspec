@@ -10,8 +10,8 @@ Pod::Spec.new do |s|
   s.source           = { :git => 'https://github.com/wizeline/WLEmptyState.git', :tag => s.version.to_s }
 
   s.ios.deployment_target = '9.0'
-  s.pod_target_xcconfig = { 'SWIFT_VERSION' => '4.0' }
-  s.swift_version    = '4.0'
+  s.pod_target_xcconfig = { 'SWIFT_VERSION' => '5.0' }
+  s.swift_version    = '5.0'
   s.source_files = 'WLEmptyState/Classes/**/*'
 
   s.resource_bundles = {

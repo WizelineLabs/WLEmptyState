@@ -14,4 +14,9 @@ final class SampleCollectionViewController: UICollectionViewController, WLEmptyS
         super.viewDidLoad()
         collectionView.emptyStateDataSource = self
     }
+    
+    func imageForEmptyDataSet() -> UIImage? {
+        return UIImage(named: "grid_icon")
+    }
+    
 }
