@@ -1,7 +1,9 @@
 ![WLEmptyState_Banner](https://user-images.githubusercontent.com/6756995/55449438-bf01f300-5588-11e9-9c0d-dd48bd5babb4.png)
 [![Build Status](https://travis-ci.org/wizeline/WLEmptyState.svg?branch=develop)](https://travis-ci.org/wizeline/WLEmptyState)
 [![Version](https://img.shields.io/cocoapods/v/WLEmptyState.svg?style=flat)](https://cocoapods.org/pods/WLEmptyState)
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![Twitter](https://img.shields.io/twitter/follow/theWizeline.svg?label=Wizeline%20&style=flat)](http://twitter.com/thewizeline)
+[![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg)](http://opensource.org/licenses/MIT)
 
 ## Table of Content <!-- omit in toc -->
 
