@@ -35,11 +35,19 @@ To run the `Example` project:
 
 ### Installing WLEmptyState
 
+#### CocoaPods
+
 WLEmptyState is available through [CocoaPods](https://cocoapods.org). To install it, add the following command to your Podfile:
 
 ```ruby
 pod 'WLEmptyState'
 ```
+
+#### Carthage
+
+Carthage is a decentralized dependency manager that builds your dependencies and provides you with binary frameworks. To integrate WLEmptyState into your Xcode project using Carthage, specify it in your Cartfile:
+
+github "wizeline/WLEmptyState"
 
 ### Configuring WLEmptyState
 
