@@ -3,7 +3,6 @@
 //  WLEmptyState
 //
 //  Created by lojals on 12/10/2018.
-//  Copyright (c) 2018 lojals. All rights reserved.
 //
 
 import UIKit
@@ -13,8 +12,11 @@ final class SampleTableViewController: UITableViewController, WLEmptyStateDataSo
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         tableView.emptyStateDataSource = self
+    }
+    
+    func imageForEmptyDataSet() -> UIImage? {
+        return UIImage(named: "list_icon")
     }
     
 }

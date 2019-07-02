@@ -15,7 +15,9 @@ class DataSourceTests: XCTestCase {
         WLEmptyState.configure()
     }
 
-    func testDefaultDataSetProperties() {
+    // MARK: - Default protocol implementation
+    
+    func testDefaultTableDataSetProperties() {
         let defaultTableViewController = DefaultTableViewController()
         
         let titleDataSource = defaultTableViewController.tableView.emptyStateDataSource?.titleForEmptyDataSet()
@@ -24,20 +26,29 @@ class DataSourceTests: XCTestCase {
         let descriptionDataSource = defaultTableViewController.tableView.emptyStateDataSource?.descriptionForEmptyDataSet()
         XCTAssertEqual(DefaultDataSource.description, descriptionDataSource)
         
-        guard let url = (Bundle(for: WLEmptyState.self)).url(forResource: "WLEmptyState", withExtension: "bundle"),
-            let bundle = Bundle(url: url) else {
-                XCTFail("EmptyState image wasn't found.")
-                return
-        }
-        let image = UIImage(named: "Empty", in: bundle, compatibleWith: nil)
-        
         let imageDataSource = defaultTableViewController.tableView.emptyStateDataSource?.imageForEmptyDataSet()
-        
-        XCTAssertEqual(image, imageDataSource)
+        XCTAssertEqual(DefaultDataSource.image, imageDataSource)
         XCTAssertNotNil(imageDataSource)
     }
     
-    func testCustomDataSetProperties() {
+    func testDefaultCollectionDataSetProperties() {
+        let defaultCollectionViewController = DefaultCollectionViewController(collectionViewLayout: UICollectionViewFlowLayout())
+        
+        let titleDataSource = defaultCollectionViewController.collectionView.emptyStateDataSource?.titleForEmptyDataSet()
+        XCTAssertEqual(DefaultDataSource.title, titleDataSource)
+        
+        let descriptionDataSource = defaultCollectionViewController.collectionView.emptyStateDataSource?.descriptionForEmptyDataSet()
+        XCTAssertEqual(DefaultDataSource.description, descriptionDataSource)
+        
+        let imageDataSource = defaultCollectionViewController.collectionView.emptyStateDataSource?.imageForEmptyDataSet()
+        
+        XCTAssertEqual(DefaultDataSource.image, imageDataSource)
+        XCTAssertNotNil(imageDataSource)
+    }
+    
+    // MARK: - Custom protocol implementation
+    
+    func testTableCustomDataSetProperties() {
         let customTableViewController = CustomTableViewController()
         
         let title = NSAttributedString(string: "Test title")
@@ -49,6 +60,21 @@ class DataSourceTests: XCTestCase {
         XCTAssertEqual(description, descriptionDataSource)
         
         let imageDataSource = customTableViewController.tableView.emptyStateDataSource?.imageForEmptyDataSet()
+        XCTAssertNil(imageDataSource)
+    }
+    
+    func testCollectionCustomDataSetProperties() {
+        let customCollectionViewController = CustomCollectionViewController(collectionViewLayout: UICollectionViewFlowLayout())
+        
+        let title = NSAttributedString(string: "Test title")
+        let titleDataSource = customCollectionViewController.collectionView.emptyStateDataSource?.titleForEmptyDataSet()
+        XCTAssertEqual(title, titleDataSource)
+        
+        let description = NSAttributedString(string: "Test description")
+        let descriptionDataSource = customCollectionViewController.collectionView.emptyStateDataSource?.descriptionForEmptyDataSet()
+        XCTAssertEqual(description, descriptionDataSource)
+        
+        let imageDataSource = customCollectionViewController.collectionView.emptyStateDataSource?.imageForEmptyDataSet()
         XCTAssertNil(imageDataSource)
     }
 

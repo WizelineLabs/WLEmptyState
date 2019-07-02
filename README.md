@@ -1,7 +1,9 @@
 ![WLEmptyState_Banner](https://user-images.githubusercontent.com/6756995/55449438-bf01f300-5588-11e9-9c0d-dd48bd5babb4.png)
 [![Build Status](https://travis-ci.org/wizeline/WLEmptyState.svg?branch=develop)](https://travis-ci.org/wizeline/WLEmptyState)
 [![Version](https://img.shields.io/cocoapods/v/WLEmptyState.svg?style=flat)](https://cocoapods.org/pods/WLEmptyState)
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![Twitter](https://img.shields.io/twitter/follow/theWizeline.svg?label=Wizeline%20&style=flat)](http://twitter.com/thewizeline)
+[![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg)](http://opensource.org/licenses/MIT)
 
 ## Table of Content <!-- omit in toc -->
 
@@ -17,7 +19,7 @@
 
 ## Overview
 
-WLEmptyState is an iOS based component that lets you customize the message when the dataset of `UITableView` is empty. We created a sample project with the WLEmptyState component to show how you can use it.
+WLEmptyState is an iOS based component that lets you customize the message when the dataset of `UITableView` or `UICollectionView` is empty. We created a sample project with the WLEmptyState component to show how you can use it.
 
 ## Running an Example Project
 
@@ -33,10 +35,20 @@ To run the `Example` project:
 
 ### Installing WLEmptyState
 
+#### CocoaPods
+
 WLEmptyState is available through [CocoaPods](https://cocoapods.org). To install it, add the following command to your Podfile:
 
 ```ruby
 pod 'WLEmptyState'
+```
+
+#### Carthage
+
+[Carthage](https://github.com/Carthage/Carthage) is a decentralized dependency manager that builds your dependencies and provides you with binary frameworks. To integrate WLEmptyState into your Xcode project using Carthage, specify it in your Cartfile:
+
+```ruby
+github "wizeline/WLEmptyState"
 ```
 
 ### Configuring WLEmptyState
@@ -60,7 +72,7 @@ The WLEmptyState component uses [Method Swizzling](https://nshipster.com/method-
 
 ### Using WLEmptyState
 
-Once you have configured `WLEmptyState`, you can use it for your `UITableViewController`. You need to conform the `WLEmptyStateDataSource` protocol. For example,
+Once you have configured `WLEmptyState`, you can use it for your `UITableViewController` or `UICollectionViewController`. You need to conform the `WLEmptyStateDataSource` protocol. For example,
 
 ```Swift
 class YourTableViewController: UITableViewController, WLEmptyStateDataSource {
@@ -73,7 +85,7 @@ class YourTableViewController: UITableViewController, WLEmptyStateDataSource {
 }
 ```
 
-After you run your project with an empty dataset for a table, you'll be able to see a default `WLEmptyState` view.
+After you run your project with an empty dataset for your entity, you'll be able to see a default `WLEmptyState` view.
 
 **Default Image**
 

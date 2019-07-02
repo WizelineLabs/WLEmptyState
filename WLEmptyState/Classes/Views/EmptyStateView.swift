@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-public final class EmptyStateView: UIView {
+final class EmptyStateView: UIView {
     
     private lazy var stackView: UIStackView = {
         let stackView = UIStackView(arrangedSubviews: [imageContainer, titleLabel, descriptionLabel])
@@ -86,6 +86,7 @@ public final class EmptyStateView: UIView {
     }
     
     override public func didMoveToSuperview() {
+        super.didMoveToSuperview()
         self.frame = self.superview?.bounds ?? .zero
     }
     

@@ -1,15 +1,14 @@
 //
-//  Mocks.swift
+//  UITableViewMocks.swift
 //  WLEmptyState_Example
 //
 //  Created by Jorge Ovalle on 2/13/19.
-//  Copyright © 2019 CocoaPods. All rights reserved.
 //
 
 import Foundation
 import WLEmptyState
 
-class DefaultTableViewController: UITableViewController, WLEmptyStateDataSource {
+final class DefaultTableViewController: UITableViewController, WLEmptyStateDataSource {
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,7 +18,7 @@ class DefaultTableViewController: UITableViewController, WLEmptyStateDataSource 
     
 }
 
-class CustomTableViewController: UITableViewController, WLEmptyStateDataSource {
+final class CustomTableViewController: UITableViewController, WLEmptyStateDataSource {
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,4 +45,12 @@ enum DefaultDataSource {
     
     static let description = NSAttributedString(string: "Oops There's no data.",
                                                 attributes: [NSAttributedString.Key.font: UIFont.preferredFont(forTextStyle: .caption1)])
+    
+    static let image: UIImage? = {
+        guard let url = (Bundle(for: WLEmptyState.self)).url(forResource: "WLEmptyState", withExtension: "bundle"),
+            let bundle = Bundle(url: url) else {
+                return nil
+        }
+        return UIImage(named: "Empty", in: bundle, compatibleWith: nil)
+    }()
 }
