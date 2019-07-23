@@ -27,6 +27,11 @@ public protocol WLEmptyStateDataSource: class {
     /// - Returns: The styled description for the empty view.
     func descriptionForEmptyDataSet() -> NSAttributedString
     
+    /// Ask the data source for a custom view to be used as Empty State View.
+    ///
+    /// - Returns: The custom view to be used.
+    func customViewForEmptyState() -> UIView?
+    
 }
 
 // MARK: - WLEmptyStateDataSource Default
@@ -49,4 +54,9 @@ public extension WLEmptyStateDataSource {
         let description = NSAttributedString(string: "Oops There's no data.", attributes: [NSAttributedString.Key.font: UIFont.preferredFont(forTextStyle: .caption1)])
         return description
     }
+    
+    func customViewForEmptyState() -> UIView? {
+        return nil
+    }
+    
 }

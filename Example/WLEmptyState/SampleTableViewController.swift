@@ -20,4 +20,3 @@ final class SampleTableViewController: UITableViewController, WLEmptyStateDataSo
     }
     
 }
-

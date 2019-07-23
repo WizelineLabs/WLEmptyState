@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 struct AssociatedKeys {
     static var emptyStateDelegate = "emptyStateDelegate"
@@ -21,7 +22,7 @@ protocol WLEmptyStateProtocol: AnyObject {
     var numberOfItems: Int { get }
     var emptyStateDelegate: WLEmptyStateDelegate? { get set }
     var emptyStateDataSource: WLEmptyStateDataSource? { get set }
-    var emptyStateView: EmptyStateView { get set }
+    var emptyStateView: UIView { get set }
 }
 
 extension WLEmptyStateProtocol {
@@ -32,10 +33,11 @@ extension WLEmptyStateProtocol {
         }
     }
     
-    var emptyStateView: EmptyStateView {
+    var emptyStateView: UIView {
         get {
-            guard let emptyStateView = objc_getAssociatedObject(self, &AssociatedKeys.emptyStateView) as? EmptyStateView else {
-                let emptyStateView = EmptyStateView(frame: .zero)
+            guard let emptyStateView = objc_getAssociatedObject(self, &AssociatedKeys.emptyStateView) as? UIView else {
+                let emptyStateView = emptyStateDataSource?.customViewForEmptyState() ?? EmptyStateView(frame: .zero)
+                emptyStateView.translatesAutoresizingMaskIntoConstraints = false
                 self.emptyStateView = emptyStateView
                 Logger.logInfo("Empty view created")
                 return emptyStateView

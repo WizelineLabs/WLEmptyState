@@ -47,9 +47,12 @@ extension UICollectionView: WLEmptyStateProtocol {
         self.swizzledReload()
         
         if numberOfItems == 0 && self.subviews.count > 1 {
-            emptyStateView.titleLabel.attributedText = self.emptyStateDataSource?.titleForEmptyDataSet()
-            emptyStateView.descriptionLabel.attributedText = self.emptyStateDataSource?.descriptionForEmptyDataSet()
-            emptyStateView.image.image = self.emptyStateDataSource?.imageForEmptyDataSet()
+            
+            if let emptyStateView = emptyStateView as? EmptyStateView {
+                emptyStateView.titleLabel.attributedText = self.emptyStateDataSource?.titleForEmptyDataSet()
+                emptyStateView.descriptionLabel.attributedText = self.emptyStateDataSource?.descriptionForEmptyDataSet()
+                emptyStateView.image.image = self.emptyStateDataSource?.imageForEmptyDataSet()
+            }
             
             backgroundView = emptyStateView
             
