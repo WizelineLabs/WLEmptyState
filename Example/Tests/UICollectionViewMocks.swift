@@ -8,6 +8,8 @@
 import Foundation
 import WLEmptyState
 
+// MARK: Default Empty State on UICollectionView
+
 final class DefaultCollectionViewController: UICollectionViewController, WLEmptyStateDataSource {
     
     override func viewDidLoad() {
@@ -17,6 +19,8 @@ final class DefaultCollectionViewController: UICollectionViewController, WLEmpty
     }
     
 }
+
+// MARK: Customized default Empty State on UICollectionView
 
 final class CustomCollectionViewController: UICollectionViewController, WLEmptyStateDataSource {
     
@@ -38,3 +42,23 @@ final class CustomCollectionViewController: UICollectionViewController, WLEmptyS
         return nil
     }
 }
+
+// MARK: Custom Empty State on UICollectionView
+
+final class CustomEmptyStateCollectionViewController: UICollectionViewController, WLEmptyStateDataSource {
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        collectionView.emptyStateDataSource = self
+    }
+    
+    func customViewForEmptyState() -> UIView? {
+        let view = UIView()
+        view.backgroundColor = .green
+        return view
+    }
+    
+}
+
+

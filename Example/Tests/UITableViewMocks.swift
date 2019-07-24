@@ -8,7 +8,7 @@
 import Foundation
 import WLEmptyState
 
-// MARK: Default Empty State on Table View
+// MARK: Default Empty State on UITableView
 
 final class DefaultTableViewController: UITableViewController, WLEmptyStateDataSource {
     
@@ -20,7 +20,7 @@ final class DefaultTableViewController: UITableViewController, WLEmptyStateDataS
     
 }
 
-// MARK: Customized default Empty State on Table View
+// MARK: Customized default Empty State on UITableView
 
 final class CustomTableViewController: UITableViewController, WLEmptyStateDataSource {
     
@@ -43,7 +43,7 @@ final class CustomTableViewController: UITableViewController, WLEmptyStateDataSo
     }
 }
 
-// MARK: Custom Empty State on Table View
+// MARK: Custom Empty State on UITableView
 
 final class CustomEmptyStateTableViewController: UITableViewController, WLEmptyStateDataSource {
     

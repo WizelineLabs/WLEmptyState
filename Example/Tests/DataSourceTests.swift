@@ -89,5 +89,14 @@ class DataSourceTests: XCTestCase {
         XCTAssertEqual(customTableViewController.tableView.emptyStateDataSource?.customViewForEmptyState()?.backgroundColor, view.backgroundColor)
     }
     
+    func testCollectionCustomEmptyStateView() {
+        let customCollectionViewController = CustomEmptyStateCollectionViewController(collectionViewLayout: UICollectionViewFlowLayout())
+        
+        let view = UIView()
+        view.backgroundColor = .green
+        
+        XCTAssertEqual(customCollectionViewController.collectionView.emptyStateDataSource?.customViewForEmptyState()?.backgroundColor, view.backgroundColor)
+    }
+    
     
 }
