@@ -41,17 +41,17 @@ public extension WLEmptyStateDataSource {
     func imageForEmptyDataSet() -> UIImage? {
         guard let url = (Bundle(for: WLEmptyState.self)).url(forResource: "WLEmptyState", withExtension: "bundle"),
             let bundle = Bundle(url: url) else { return nil }
-        let image = UIImage(named: "Empty", in: bundle, compatibleWith: nil)
+        let image = UIImage(named: EmptyStateView.DefaultConstants.image, in: bundle, compatibleWith: nil)
         return image
     }
     
     func titleForEmptyDataSet() -> NSAttributedString {
-        let title = NSAttributedString(string: "Empty DataSet", attributes: [NSAttributedString.Key.font: UIFont.preferredFont(forTextStyle: .headline)])
+        let title = NSAttributedString(string: EmptyStateView.DefaultConstants.title, attributes: [NSAttributedString.Key.font: UIFont.preferredFont(forTextStyle: .headline)])
         return title
     }
     
     func descriptionForEmptyDataSet() -> NSAttributedString {
-        let description = NSAttributedString(string: "Oops There's no data.", attributes: [NSAttributedString.Key.font: UIFont.preferredFont(forTextStyle: .caption1)])
+        let description = NSAttributedString(string: EmptyStateView.DefaultConstants.description, attributes: [NSAttributedString.Key.font: UIFont.preferredFont(forTextStyle: .caption1)])
         return description
     }
     
