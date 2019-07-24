@@ -8,6 +8,8 @@
 import Foundation
 import WLEmptyState
 
+// MARK: Default Empty State on Table View
+
 final class DefaultTableViewController: UITableViewController, WLEmptyStateDataSource {
     
     override func viewDidLoad() {
@@ -17,6 +19,8 @@ final class DefaultTableViewController: UITableViewController, WLEmptyStateDataS
     }
     
 }
+
+// MARK: Customized default Empty State on Table View
 
 final class CustomTableViewController: UITableViewController, WLEmptyStateDataSource {
     
@@ -38,6 +42,25 @@ final class CustomTableViewController: UITableViewController, WLEmptyStateDataSo
         return nil
     }
 }
+
+// MARK: Custom Empty State on Table View
+
+final class CustomEmptyStateTableViewController: UITableViewController, WLEmptyStateDataSource {
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        tableView.emptyStateDataSource = self
+    }
+    
+    func customViewForEmptyState() -> UIView? {
+        let view = UIView()
+        view.backgroundColor = .green
+        return view
+    }
+    
+}
+
 
 enum DefaultDataSource {
     static let title = NSAttributedString(string: "Empty DataSet",

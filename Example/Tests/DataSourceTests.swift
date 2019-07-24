@@ -46,7 +46,7 @@ class DataSourceTests: XCTestCase {
         XCTAssertNotNil(imageDataSource)
     }
     
-    // MARK: - Custom protocol implementation
+    // MARK: - Custom protocol implementation for default component
     
     func testTableCustomDataSetProperties() {
         let customTableViewController = CustomTableViewController()
@@ -77,5 +77,17 @@ class DataSourceTests: XCTestCase {
         let imageDataSource = customCollectionViewController.collectionView.emptyStateDataSource?.imageForEmptyDataSet()
         XCTAssertNil(imageDataSource)
     }
-
+    
+    // MARK: Custom view on data source
+    
+    func testTableCustomEmptyStateView() {
+        let customTableViewController = CustomEmptyStateTableViewController()
+        
+        let view = UIView()
+        view.backgroundColor = .green
+        
+        XCTAssertEqual(customTableViewController.tableView.emptyStateDataSource?.customViewForEmptyState()?.backgroundColor, view.backgroundColor)
+    }
+    
+    
 }
