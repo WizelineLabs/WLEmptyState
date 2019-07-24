@@ -19,11 +19,4 @@ final class SampleCollectionViewController: UICollectionViewController, WLEmptyS
         return UIImage(named: "grid_icon")
     }
     
-    func customViewForEmptyState() -> UIView? {
-        let activityIndicatorView = UIActivityIndicatorView()
-        activityIndicatorView.startAnimating()
-        activityIndicatorView.color = .purple
-        return activityIndicatorView
-    }
-    
 }
