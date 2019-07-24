@@ -91,9 +91,8 @@ After you run your project with an empty dataset for your entity, you'll be able
 
 ![Default WLEmptyState](https://user-images.githubusercontent.com/6756995/52525837-21b7cc00-2c75-11e9-8ef4-6c2ca226ddb3.png)
 
-## Customizing WLEmptyState
-
-If you want to customize the text, description, or image, you need to implement the `WLEmptyStateDataSource` function. You can find the code for customization in the following list:
+## Customizing Default WLEmptyState
+If you want to customize the text, description, or image, of the defatult component you need to implement the `WLEmptyStateDataSource` function. You can find the code for customization in the following list:
 
 - Customize Image
 
@@ -124,6 +123,19 @@ func descriptionForEmptyDataSet() -> NSAttributedString {
 **Customized Image**
 
 <img src="https://user-images.githubusercontent.com/3466367/52595877-8fe6c500-2e14-11e9-85f3-2937746d4b24.png" width="300">
+
+## Creating your own EmptyState
+Using `customViewForEmptyState()` allows you to provide your own implementation for Empty State.
+
+```Swift
+func customViewForEmptyState() -> UIView? {
+  let activityIndicatorView = UIActivityIndicatorView()
+  activityIndicatorView.startAnimating()
+  activityIndicatorView.color = .purple
+  return activityIndicatorView
+}
+```
+![Simulator Screen Shot - iPhone X - 2019-07-24 at 16 07 43](https://user-images.githubusercontent.com/6756995/61828904-62735e00-ae2d-11e9-8020-2014ac3bfb17.png)
 
 ## Contributing to WLEmptyState
 
