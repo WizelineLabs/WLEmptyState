@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'WLEmptyState'
-  s.version          = '2.0.0'
+  s.version          = '3.0.0'
   s.summary          = 'Custom view for Empty states on tables or collection entities'
 
   s.description      = 'A control to display a place holder in case there\'s no data on a UITableView or UICollectionView'
