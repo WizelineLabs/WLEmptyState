@@ -95,4 +95,10 @@ final class EmptyStateView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    enum DefaultConstants {
+        static let image = "Empty"
+        static let title = "Empty DataSet"
+        static let description = "Oops There's no data."
+    }
+    
 }
