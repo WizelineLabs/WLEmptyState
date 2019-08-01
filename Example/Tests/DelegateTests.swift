@@ -19,30 +19,30 @@ class DelegateTests: XCTestCase {
     func testShouldScrollDelegatePropertyOnTableDefault() {
         let defaultTableViewController = DefaultTableViewController()
         
-        let shouldScrollTableView = defaultTableViewController.tableView.emptyStateDelegate?.emptyStateShouldScroll()
-        XCTAssertEqual(true, shouldScrollTableView)
+        let enableScrollForEmptyState = defaultTableViewController.tableView.emptyStateDelegate?.enableScrollForEmptyState()
+        XCTAssertEqual(true, enableScrollForEmptyState)
     }
     
     func testShouldScrollDelegatePropertyOnTableCustom() {
         let customTableViewController = CustomEmptyStateTableViewController()
         
-        let shouldScrollTableView = customTableViewController.tableView.emptyStateDelegate?.emptyStateShouldScroll()
-        XCTAssertEqual(false, shouldScrollTableView)
+        let enableScrollForEmptyState = customTableViewController.tableView.emptyStateDelegate?.enableScrollForEmptyState()
+        XCTAssertEqual(false, enableScrollForEmptyState)
     }
     
     // MARK: - UICollectionView
     func testShouldScrollDelegatePropertyOnCollectionDefault() {
         let defaultCollectionViewController = DefaultCollectionViewController(collectionViewLayout: UICollectionViewFlowLayout())
         
-        let shouldScrollTableView = defaultCollectionViewController.collectionView.emptyStateDelegate?.emptyStateShouldScroll()
-        XCTAssertEqual(true, shouldScrollTableView)
+        let enableScrollForEmptyState = defaultCollectionViewController.collectionView.emptyStateDelegate?.enableScrollForEmptyState()
+        XCTAssertEqual(true, enableScrollForEmptyState)
     }
     
     func testShouldScrollDelegatePropertyOnCollectionCustom() {
         let customCollectionViewController = CustomCollectionViewController(collectionViewLayout: UICollectionViewFlowLayout())
         
-        let shouldScrollTableView = customCollectionViewController.collectionView.emptyStateDelegate?.emptyStateShouldScroll()
-        XCTAssertEqual(false, shouldScrollTableView)
+        let enableScrollForEmptyState = customCollectionViewController.collectionView.emptyStateDelegate?.enableScrollForEmptyState()
+        XCTAssertEqual(false, enableScrollForEmptyState)
     }
     
 }

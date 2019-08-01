@@ -62,7 +62,7 @@ extension UITableView: WLEmptyStateProtocol {
         
         if numberOfItems == 0 && self.subviews.count > 1 {
             originalScrollingValue = isScrollEnabled
-            isScrollEnabled = emptyStateDelegate?.emptyStateShouldScroll() ?? DefaultConstants.shouldScrollOnEmptyState
+            isScrollEnabled = emptyStateDelegate?.enableScrollForEmptyState() ?? DefaultConstants.enableScrollForEmptyState
             
             addSubview(emptyStateView)
             if let emptyStateView = emptyStateView as? EmptyStateView {

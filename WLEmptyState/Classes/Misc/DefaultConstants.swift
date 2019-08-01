@@ -9,6 +9,6 @@ import Foundation
 
 enum DefaultConstants {
     
-    static let shouldScrollOnEmptyState: Bool = true
+    static let enableScrollForEmptyState: Bool = true
     
 }

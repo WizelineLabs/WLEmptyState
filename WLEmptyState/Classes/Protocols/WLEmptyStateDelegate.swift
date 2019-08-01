@@ -9,13 +9,13 @@
 import Foundation
 
 public protocol WLEmptyStateDelegate: class {
-    func emptyStateShouldScroll() -> Bool
+    func enableScrollForEmptyState() -> Bool
 }
 
 public extension WLEmptyStateDelegate {
     
-    func emptyStateShouldScroll() -> Bool {
-        return DefaultConstants.shouldScrollOnEmptyState
+    func enableScrollForEmptyState() -> Bool {
+        return DefaultConstants.enableScrollForEmptyState
     }
     
 }
