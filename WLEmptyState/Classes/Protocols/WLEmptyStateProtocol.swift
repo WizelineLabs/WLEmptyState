@@ -12,6 +12,7 @@ struct AssociatedKeys {
     static var emptyStateDelegate = "emptyStateDelegate"
     static var emptyStateDataSource = "emptyStateDataSource"
     static var emptyStateView = "emptyStateView"
+    static var originalScrollingValue = "originalScrollingValue"
 }
 
 /// This protocol provides the basic needed to override emptyViewState on anyclass that supports it

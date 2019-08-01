@@ -10,12 +10,13 @@ import WLEmptyState
 
 // MARK: Default Empty State on UITableView
 
-final class DefaultTableViewController: UITableViewController, WLEmptyStateDataSource {
+final class DefaultTableViewController: UITableViewController, WLEmptyStateDataSource, WLEmptyStateDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tableView.emptyStateDataSource = self
+        tableView.emptyStateDelegate = self
     }
     
 }
@@ -45,18 +46,23 @@ final class CustomTableViewController: UITableViewController, WLEmptyStateDataSo
 
 // MARK: Custom Empty State on UITableView
 
-final class CustomEmptyStateTableViewController: UITableViewController, WLEmptyStateDataSource {
+final class CustomEmptyStateTableViewController: UITableViewController, WLEmptyStateDataSource, WLEmptyStateDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tableView.emptyStateDataSource = self
+        tableView.emptyStateDelegate = self
     }
     
     func customViewForEmptyState() -> UIView? {
         let view = UIView()
         view.backgroundColor = .green
         return view
+    }
+    
+    func enableScrollForEmptyState() -> Bool {
+        return false
     }
     
 }

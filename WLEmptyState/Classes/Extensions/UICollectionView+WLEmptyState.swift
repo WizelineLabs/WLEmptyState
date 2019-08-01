@@ -43,26 +43,44 @@ extension UICollectionView: WLEmptyStateProtocol {
         }
     }
     
-    @objc private dynamic func swizzledReload() {
-        guard emptyStateDataSource != nil else { return }
+    /// The original value before enable/disable scrolling.
+    var originalScrollingValue: Bool {
+        get {
+            return (objc_getAssociatedObject(self, &AssociatedKeys.originalScrollingValue) as? Bool) ?? isScrollEnabled
+        }
         
+        set {
+            objc_setAssociatedObject(self, &AssociatedKeys.originalScrollingValue, newValue, .OBJC_ASSOCIATION_COPY)
+        }
+    }
+    
+    @objc private dynamic func swizzledReload() {
         swizzledReload()
         
+        guard emptyStateDataSource != nil else { return }
+        
         if numberOfItems == 0 && self.subviews.count > 1 {
+            originalScrollingValue = isScrollEnabled
+            isScrollEnabled = emptyStateDelegate?.enableScrollForEmptyState() ?? DefaultConstants.enableScrollForEmptyState
+            
             backgroundView = emptyStateView
             if let emptyStateView = emptyStateView as? EmptyStateView {
-                emptyStateView.titleLabel.attributedText = self.emptyStateDataSource?.titleForEmptyDataSet()
-                emptyStateView.descriptionLabel.attributedText = self.emptyStateDataSource?.descriptionForEmptyDataSet()
-                emptyStateView.image.image = self.emptyStateDataSource?.imageForEmptyDataSet()
+                let datasource = self.emptyStateDataSource
+                emptyStateView.titleLabel.attributedText = datasource?.titleForEmptyDataSet()
+                emptyStateView.descriptionLabel.attributedText = datasource?.descriptionForEmptyDataSet()
+                emptyStateView.image = datasource?.imageForEmptyDataSet()
             } else {
                 emptyStateView.translatesAutoresizingMaskIntoConstraints = false
-                emptyStateView.heightAnchor.constraint(equalTo: heightAnchor).isActive = true
-                emptyStateView.widthAnchor.constraint(equalTo: widthAnchor).isActive = true
-                emptyStateView.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
-                emptyStateView.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
+                NSLayoutConstraint.activate([
+                    emptyStateView.heightAnchor.constraint(equalTo: heightAnchor),
+                    emptyStateView.widthAnchor.constraint(equalTo: widthAnchor),
+                    emptyStateView.centerYAnchor.constraint(equalTo: centerYAnchor),
+                    emptyStateView.centerXAnchor.constraint(equalTo: centerXAnchor)
+                ])
             }
         } else {
             removeEmptyView()
+            isScrollEnabled = originalScrollingValue
         }
     }
 }
