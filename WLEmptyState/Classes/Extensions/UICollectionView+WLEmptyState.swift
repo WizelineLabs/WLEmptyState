@@ -44,6 +44,8 @@ extension UICollectionView: WLEmptyStateProtocol {
     }
     
     @objc private dynamic func swizzledReload() {
+        guard emptyStateDataSource != nil else { return }
+        
         swizzledReload()
         
         if numberOfItems == 0 && self.subviews.count > 1 {
