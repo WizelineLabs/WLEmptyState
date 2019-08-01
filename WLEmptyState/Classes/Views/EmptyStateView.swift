@@ -23,21 +23,21 @@ final class EmptyStateView: UIView {
     
     private lazy var imageContainer: UIView = {
         let view = UIView()
-        view.addSubview(image)
+        view.addSubview(imageView)
         
         NSLayoutConstraint.activate([
-            image.widthAnchor.constraint(equalToConstant: 80),
-            image.heightAnchor.constraint(equalToConstant: 80),
-            image.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-            image.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            view.heightAnchor.constraint(equalTo: image.heightAnchor)])
+            imageView.widthAnchor.constraint(equalToConstant: 80),
+            imageView.heightAnchor.constraint(equalToConstant: 80),
+            imageView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            imageView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            view.heightAnchor.constraint(equalTo: imageView.heightAnchor)])
         return view
     }()
     
-    lazy var image: UIImageView = {
-        let image = UIImageView()
-        image.translatesAutoresizingMaskIntoConstraints = false
-        return image
+    private lazy var imageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        return imageView
     }()
     
     lazy var titleLabel: UILabel = {
@@ -65,6 +65,12 @@ final class EmptyStateView: UIView {
         containerView.translatesAutoresizingMaskIntoConstraints = false
         return  containerView
     }()
+    
+    var image: UIImage? {
+        didSet {
+            self.imageView.image = image
+        }
+    }
     
     override public init(frame: CGRect) {
         super.init(frame: frame)

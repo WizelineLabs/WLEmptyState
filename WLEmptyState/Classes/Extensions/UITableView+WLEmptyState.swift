@@ -69,7 +69,7 @@ extension UITableView: WLEmptyStateProtocol {
                 let datasource = self.emptyStateDataSource
                 emptyStateView.titleLabel.attributedText = datasource?.titleForEmptyDataSet()
                 emptyStateView.descriptionLabel.attributedText = datasource?.descriptionForEmptyDataSet()
-                emptyStateView.image.image = datasource?.imageForEmptyDataSet()
+                emptyStateView.image = datasource?.imageForEmptyDataSet()
             } else {
                 emptyStateView.translatesAutoresizingMaskIntoConstraints = false
                 NSLayoutConstraint.activate([
