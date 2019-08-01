@@ -61,7 +61,7 @@ final class CustomEmptyStateTableViewController: UITableViewController, WLEmptyS
         return view
     }
     
-    func emptyStateShouldScroll() -> Bool {
+    func enableScrollForEmptyState() -> Bool {
         return false
     }
     

@@ -44,7 +44,7 @@ final class CustomCollectionViewController: UICollectionViewController, WLEmptyS
         return nil
     }
     
-    func emptyStateShouldScroll() -> Bool {
+    func enableScrollForEmptyState() -> Bool {
         return false
     }
 }
