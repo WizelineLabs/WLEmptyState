@@ -12,7 +12,7 @@ public protocol WLEmptyStateDelegate: class {
     func emptyStateShouldScroll() -> Bool
 }
 
-extension WLEmptyStateDelegate {
+public extension WLEmptyStateDelegate {
     
     func emptyStateShouldScroll() -> Bool {
         return true

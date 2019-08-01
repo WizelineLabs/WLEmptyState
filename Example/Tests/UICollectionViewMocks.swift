@@ -10,24 +10,26 @@ import WLEmptyState
 
 // MARK: Default Empty State on UICollectionView
 
-final class DefaultCollectionViewController: UICollectionViewController, WLEmptyStateDataSource {
+final class DefaultCollectionViewController: UICollectionViewController, WLEmptyStateDataSource, WLEmptyStateDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         collectionView.emptyStateDataSource = self
+        collectionView.emptyStateDelegate = self
     }
     
 }
 
 // MARK: Customized default Empty State on UICollectionView
 
-final class CustomCollectionViewController: UICollectionViewController, WLEmptyStateDataSource {
+final class CustomCollectionViewController: UICollectionViewController, WLEmptyStateDataSource, WLEmptyStateDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         collectionView.emptyStateDataSource = self
+        collectionView.emptyStateDelegate = self
     }
     
     func titleForEmptyDataSet() -> NSAttributedString {
@@ -40,6 +42,10 @@ final class CustomCollectionViewController: UICollectionViewController, WLEmptyS
     
     func imageForEmptyDataSet() -> UIImage? {
         return nil
+    }
+    
+    func emptyStateShouldScroll() -> Bool {
+        return false
     }
 }
 
