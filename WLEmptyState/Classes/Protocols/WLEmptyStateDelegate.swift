@@ -9,7 +9,13 @@
 import Foundation
 
 public protocol WLEmptyStateDelegate: class {
-    // TODO: Add delegate functions 😅
-    //emptyDataSetShouldAllowTouch
+    func emptyStateShouldScroll() -> Bool
 }
 
+extension WLEmptyStateDelegate {
+    
+    func emptyStateShouldScroll() -> Bool {
+        return true
+    }
+    
+}
