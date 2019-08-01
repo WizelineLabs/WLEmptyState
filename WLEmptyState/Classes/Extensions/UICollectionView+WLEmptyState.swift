@@ -61,7 +61,7 @@ extension UICollectionView: WLEmptyStateProtocol {
         
         if numberOfItems == 0 && self.subviews.count > 1 {
             originalScrollingValue = isScrollEnabled
-            isScrollEnabled = emptyStateDelegate?.emptyStateShouldScroll() ?? true
+            isScrollEnabled = emptyStateDelegate?.emptyStateShouldScroll() ?? DefaultConstants.shouldScrollOnEmptyState
             
             backgroundView = emptyStateView
             if let emptyStateView = emptyStateView as? EmptyStateView {

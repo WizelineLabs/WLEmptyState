@@ -15,7 +15,7 @@ public protocol WLEmptyStateDelegate: class {
 public extension WLEmptyStateDelegate {
     
     func emptyStateShouldScroll() -> Bool {
-        return true
+        return DefaultConstants.shouldScrollOnEmptyState
     }
     
 }
