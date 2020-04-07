@@ -137,6 +137,28 @@ func customViewForEmptyState() -> UIView? {
 ```
 ![Simulator Screen Shot - iPhone X - 2019-07-24 at 16 07 43](https://user-images.githubusercontent.com/6756995/61828904-62735e00-ae2d-11e9-8020-2014ac3bfb17.png)
 
+## Disable scroll
+You can disable the scroll when the Empty State is showing. You only need to conform the `WLEmptyStateDelegate` protocol and return `false` in the `enableScrollForEmptyState()` function: 
+
+```Swift
+// Conform the WLEmptyStateDelegate protocol
+class YourTableViewController: UITableViewController, WLEmptyStateDataSource, WLEmptyStateDelegate {
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        tableView.emptyStateDataSource = self        
+        tableView.emptyStateDelegate = self // Set your delegate
+    }
+
+    func enableScrollForEmptyState() -> Bool {        
+        // To enable/disable the scroll return true or false
+        return false 
+    }
+
+}
+```
+
 ## Contributing to WLEmptyState
 
 We actively welcome your pull requests. We are trying to make contributions to this project as transparent and accessible as possible, please read our [Contributing guidelines](contributing.md) and follow the [Code of conduct](CODE_OF_CONDUCT.md).
