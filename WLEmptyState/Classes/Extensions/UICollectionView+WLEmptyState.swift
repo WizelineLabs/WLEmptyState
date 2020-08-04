@@ -79,7 +79,8 @@ extension UICollectionView: WLEmptyStateProtocol {
                 ])
             }
         } else {
-            removeEmptyView()
+            // NOTE: As `UICollectionView` is using `backgroundView` we're not calling `removeEmptyView`.
+            backgroundView = nil
             isScrollEnabled = originalScrollingValue
         }
     }
