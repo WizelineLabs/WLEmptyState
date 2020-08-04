@@ -1,5 +1,5 @@
-![WLEmptyState_Banner](https://user-images.githubusercontent.com/6756995/55449438-bf01f300-5588-11e9-9c0d-dd48bd5babb4.png)
-[![Build Status](https://travis-ci.org/wizeline/WLEmptyState.svg?branch=develop)](https://travis-ci.org/wizeline/WLEmptyState)
+![WLEmptyState_Banner](https://user-images.githubusercontent.com/6756995/55449438-bf01f300-5588-11e9-9c0d-dd48bd5babb4.png
+![WLEmptyState CI](https://github.com/wizeline/WLEmptyState/workflows/WLEmptyState%20CI/badge.svg)
 [![Version](https://img.shields.io/cocoapods/v/WLEmptyState.svg?style=flat)](https://cocoapods.org/pods/WLEmptyState)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![Twitter](https://img.shields.io/twitter/follow/theWizeline.svg?label=Wizeline%20&style=flat)](http://twitter.com/thewizeline)
@@ -138,7 +138,7 @@ func customViewForEmptyState() -> UIView? {
 ![Simulator Screen Shot - iPhone X - 2019-07-24 at 16 07 43](https://user-images.githubusercontent.com/6756995/61828904-62735e00-ae2d-11e9-8020-2014ac3bfb17.png)
 
 ## Disable scroll
-You can disable the scroll when the Empty State is showing. You only need to conform the `WLEmptyStateDelegate` protocol and return `false` in the `enableScrollForEmptyState()` function: 
+You can disable the scroll when the Empty State is showing. You only need to conform the `WLEmptyStateDelegate` protocol and return `false` in the `enableScrollForEmptyState()` function:
 
 ```Swift
 // Conform the WLEmptyStateDelegate protocol
@@ -146,14 +146,14 @@ class YourTableViewController: UITableViewController, WLEmptyStateDataSource, WL
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         tableView.emptyStateDataSource = self        
         tableView.emptyStateDelegate = self // Set your delegate
     }
 
     func enableScrollForEmptyState() -> Bool {        
         // To enable/disable the scroll return true or false
-        return false 
+        return false
     }
 
 }
