@@ -58,7 +58,7 @@ extension UITableView: WLEmptyStateProtocol {
     @objc private dynamic func swizzledReload() {
         swizzledReload()
         
-        guard emptyStateDataSource != nil else { return }
+        guard let emptyStateDataSource = emptyStateDataSource else { return }
         
         if numberOfItems == 0 && self.subviews.count > 1 {
             originalScrollingValue = isScrollEnabled
@@ -66,10 +66,9 @@ extension UITableView: WLEmptyStateProtocol {
             
             addSubview(emptyStateView)
             if let emptyStateView = emptyStateView as? EmptyStateView {
-                let datasource = self.emptyStateDataSource
-                emptyStateView.titleLabel.attributedText = datasource?.titleForEmptyDataSet()
-                emptyStateView.descriptionLabel.attributedText = datasource?.descriptionForEmptyDataSet()
-                emptyStateView.image = datasource?.imageForEmptyDataSet()
+                emptyStateView.titleLabel.attributedText = emptyStateDataSource.titleForEmptyDataSet()
+                emptyStateView.descriptionLabel.attributedText = emptyStateDataSource.descriptionForEmptyDataSet()
+                emptyStateView.image = emptyStateDataSource.imageForEmptyDataSet()
             } else {
                 emptyStateView.translatesAutoresizingMaskIntoConstraints = false
                 NSLayoutConstraint.activate([
