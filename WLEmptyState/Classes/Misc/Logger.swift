@@ -9,7 +9,7 @@ import Foundation
 
 final class Logger {
     
-    /// Enum which maps an appropiate symbol which added as prefix for each log message
+    /// Enum which maps an appropriate symbol which added as prefix for each log message
     ///
     /// - trace: Log type trace
     /// - info: Log type info

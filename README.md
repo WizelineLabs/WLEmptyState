@@ -92,7 +92,7 @@ After you run your project with an empty dataset for your entity, you'll be able
 ![Default WLEmptyState](https://user-images.githubusercontent.com/6756995/52525837-21b7cc00-2c75-11e9-8ef4-6c2ca226ddb3.png)
 
 ## Customizing Default WLEmptyState
-If you want to customize the text, description, or image, of the defatult component you need to implement the `WLEmptyStateDataSource` function. You can find the code for customization in the following list:
+If you want to customize the text, description, or image, of the default component you need to implement the `WLEmptyStateDataSource` function. You can find the code for customization in the following list:
 
 - Customize Image
 
