@@ -1,6 +1,4 @@
 name: "WLEmptyState CI"
-uses: ty0x2333/cocoapods-action@0.2.0
-
 on:
   push:
     branches:
@@ -10,18 +8,28 @@ on:
     branches:
       - '*'
 jobs:
-  test:
+  build:
     runs-on: macOS-latest
     steps:
     - uses: actions/checkout@main
     - name: Set xcode Version
-      run: sudo xcode-select -s /Applications/Xcode_11.5.app
+      run: sudo xcode-select -s /Applications/Xcode_11.app
     - name: Install Dependencies
       run: |
         cd Example
-        pod install --repo-update
+        pod install
       shell: bash
     - uses: ty0x2333/cocoapods-action@master
       with:
-        additional_build_params: -destination 'platform=iOS Simulator,name=iPhone 11 Pro,OS=13.5'
+        additional_build_params: -destination 'platform=iOS Simulator,name=iPhone 11 Pro,OS=13'
         additional_lint_params: --private
+
+spm:
+    name: Test with SPM
+    runs-on: macOS-latest
+    env:
+      DEVELOPER_DIR: /Applications/Xcode_12.app/Contents/Developer
+    steps:
+      - uses: actions/checkout@v2
+      - name: SPM Test
+        run: swift test -c debug
