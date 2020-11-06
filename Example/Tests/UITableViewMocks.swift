@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import WLEmptyState
+@testable import WLEmptyState
 
 // MARK: Default Empty State on UITableView
 
@@ -76,10 +76,19 @@ enum DefaultDataSource {
                                                 attributes: [NSAttributedString.Key.font: UIFont.preferredFont(forTextStyle: .caption1)])
     
     static let image: UIImage? = {
-        guard let url = (Bundle(for: WLEmptyState.self)).url(forResource: "WLEmptyState", withExtension: "bundle"),
-            let bundle = Bundle(url: url) else {
+        #if SWIFT_PACKAGE
+           let resourceBundle = Bundle.module
+        #else
+            guard let url = (Bundle(for: WLEmptyState.self)).url(forResource: "WLEmptyState", withExtension: "bundle"),
+                    let resourceBundle = Bundle(url: url) else {
                 return nil
+            }
+        #endif
+        
+        let image = UIImage(named: "Empty", in: resourceBundle, compatibleWith: nil)
+        if #available(iOS 13, *) {
+            return  image?.withTintColor(.accent)
         }
-        return UIImage(named: "Empty", in: bundle, compatibleWith: nil)
+        return image
     }()
 }
