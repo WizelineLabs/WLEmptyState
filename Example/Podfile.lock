@@ -1,17 +1,17 @@
 PODS:
-  - iOSSnapshotTestCase (4.0.1):
-    - iOSSnapshotTestCase/SwiftSupport (= 4.0.1)
-  - iOSSnapshotTestCase/Core (4.0.1)
-  - iOSSnapshotTestCase/SwiftSupport (4.0.1):
+  - iOSSnapshotTestCase (5.0.2):
+    - iOSSnapshotTestCase/SwiftSupport (= 5.0.2)
+  - iOSSnapshotTestCase/Core (5.0.2)
+  - iOSSnapshotTestCase/SwiftSupport (5.0.2):
     - iOSSnapshotTestCase/Core
-  - WLEmptyState (3.0.0)
+  - WLEmptyState (3.1.0)
 
 DEPENDENCIES:
   - iOSSnapshotTestCase
   - WLEmptyState (from `../`)
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  trunk:
     - iOSSnapshotTestCase
 
 EXTERNAL SOURCES:
@@ -19,9 +19,9 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  iOSSnapshotTestCase: f3b2b7e606fe03fdbe49af84316bd235df32dc44
-  WLEmptyState: 5c7cae4cdc57641ff1193338ad601bf4fa2f05ad
+  iOSSnapshotTestCase: 2d51aa06775e95cecb0a1fb9c5c159ccd1dd4596
+  WLEmptyState: 15efaffcf44d58d280bc9856a9eff436ce3bd08c
 
 PODFILE CHECKSUM: 5fd6a2332b7cd50dfecaf0807164322168c50c78
 
-COCOAPODS: 1.7.3
+COCOAPODS: 1.8.4
