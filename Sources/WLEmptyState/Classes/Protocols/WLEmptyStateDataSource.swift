@@ -39,20 +39,30 @@ public protocol WLEmptyStateDataSource: class {
 public extension WLEmptyStateDataSource {
     
     func imageForEmptyDataSet() -> UIImage? {
-        guard let url = (Bundle(for: WLEmptyState.self)).url(forResource: "WLEmptyState", withExtension: "bundle"),
-            let bundle = Bundle(url: url) else { return nil }
-        let image = UIImage(named: EmptyStateView.DefaultConstants.image, in: bundle, compatibleWith: nil)
+        #if SWIFT_PACKAGE
+           let resourceBundle = Bundle.module
+        #else
+            guard let url = (Bundle(for: WLEmptyState.self)).url(forResource: "WLEmptyState", withExtension: "bundle"),
+                    let resourceBundle = Bundle(url: url) else {
+                return nil
+            }
+        #endif
+        
+        let image = UIImage(named: EmptyStateView.DefaultConstants.image, in: resourceBundle, compatibleWith: nil)
+        if #available(iOS 13, *) {
+            return  image?.withTintColor(.accent)
+        }
         return image
     }
     
     func titleForEmptyDataSet() -> NSAttributedString {
-        let title = NSAttributedString(string: EmptyStateView.DefaultConstants.title, attributes: [NSAttributedString.Key.font: UIFont.preferredFont(forTextStyle: .headline)])
-        return title
+        NSAttributedString(string: EmptyStateView.DefaultConstants.title,
+                           attributes: [NSAttributedString.Key.font: UIFont.preferredFont(forTextStyle: .headline)])
     }
     
     func descriptionForEmptyDataSet() -> NSAttributedString {
-        let description = NSAttributedString(string: EmptyStateView.DefaultConstants.description, attributes: [NSAttributedString.Key.font: UIFont.preferredFont(forTextStyle: .caption1)])
-        return description
+        NSAttributedString(string: EmptyStateView.DefaultConstants.description,
+                           attributes: [NSAttributedString.Key.font: UIFont.preferredFont(forTextStyle: .caption1)])
     }
     
     func customViewForEmptyState() -> UIView? {

@@ -1,0 +1,24 @@
+name: "WLEmptyState CI"
+
+on:
+  push:
+    branches:
+      - main
+      - develop
+  pull_request:
+    branches:
+      - '*'
+
+jobs:
+  iOS:
+    name: WLEmptyState - Test iOS
+    runs-on: macOS-latest
+    env:
+      DEVELOPER_DIR: /Applications/Xcode_11.5.app/Contents/Developer
+    strategy:
+      matrix:
+        destination: ["OS=13.5,name=iPhone 11 Pro"] #, "OS=12.4,name=iPhone XS", "OS=11.4,name=iPhone X", "OS=10.3.1,name=iPhone SE"]
+    steps:
+      - uses: actions/checkout@v2
+      - name: iOS - ${{ matrix.destination }}
+        run: xcodebuild -workspace "Example/WLEmptyState.xcworkspace" -scheme "WLEmptyState-Example" -destination "${{ matrix.destination }}" ONLY_ACTIVE_ARCH=NO | xcpretty && xcodebuild test -workspace "Example/WLEmptyState.xcworkspace" -scheme "WLEmptyState-Example" -destination "${{ matrix.destination }}" ONLY_ACTIVE_ARCH=NO

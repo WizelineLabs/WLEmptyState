@@ -42,14 +42,14 @@ final class EmptyStateView: UIView {
     
     lazy var titleLabel: UILabel = {
         let label = UILabel(frame: .zero)
-        label.backgroundColor = .white
+        label.backgroundColor = .background
         label.textAlignment = .center
         return  label
     }()
     
     lazy var descriptionLabel: UILabel = {
         let label = UILabel(frame: .zero)
-        label.backgroundColor = .white
+        label.backgroundColor = .background
         label.numberOfLines = 0
         label.textAlignment = .center
         return  label
@@ -75,7 +75,7 @@ final class EmptyStateView: UIView {
     override public init(frame: CGRect) {
         super.init(frame: frame)
         
-        backgroundColor = .white
+        backgroundColor = .background
         
         addSubview(containerView)
         

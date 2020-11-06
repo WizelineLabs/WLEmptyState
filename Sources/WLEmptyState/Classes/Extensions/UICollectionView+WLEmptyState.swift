@@ -57,7 +57,7 @@ extension UICollectionView: WLEmptyStateProtocol {
     @objc private dynamic func swizzledReload() {
         swizzledReload()
         
-        guard emptyStateDataSource != nil else { return }
+        guard let emptyStateDataSource = emptyStateDataSource else { return }
         
         if numberOfItems == 0 && self.subviews.count > 1 {
             originalScrollingValue = isScrollEnabled
@@ -65,10 +65,9 @@ extension UICollectionView: WLEmptyStateProtocol {
             
             backgroundView = emptyStateView
             if let emptyStateView = emptyStateView as? EmptyStateView {
-                let datasource = self.emptyStateDataSource
-                emptyStateView.titleLabel.attributedText = datasource?.titleForEmptyDataSet()
-                emptyStateView.descriptionLabel.attributedText = datasource?.descriptionForEmptyDataSet()
-                emptyStateView.image = datasource?.imageForEmptyDataSet()
+                emptyStateView.titleLabel.attributedText = emptyStateDataSource.titleForEmptyDataSet()
+                emptyStateView.descriptionLabel.attributedText = emptyStateDataSource.descriptionForEmptyDataSet()
+                emptyStateView.image = emptyStateDataSource.imageForEmptyDataSet()
             } else {
                 emptyStateView.translatesAutoresizingMaskIntoConstraints = false
                 NSLayoutConstraint.activate([
@@ -79,7 +78,8 @@ extension UICollectionView: WLEmptyStateProtocol {
                 ])
             }
         } else {
-            removeEmptyView()
+            // NOTE: As `UICollectionView` is using `backgroundView` we're not calling `removeEmptyView`.
+            backgroundView = nil
             isScrollEnabled = originalScrollingValue
         }
     }
