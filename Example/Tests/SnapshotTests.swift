@@ -23,8 +23,8 @@ class SnapshotTests: FBSnapshotTestCase {
         super.setUp()
         recordMode = isRecording
         
-        sampleTableViewController = UIViewController.instanciate(type: SampleTableViewController.self)
-        sampleCollectionViewController = UIViewController.instanciate(type: SampleCollectionViewController.self)
+        sampleTableViewController = UIViewController.instantiate(type: SampleTableViewController.self)
+        sampleCollectionViewController = UIViewController.instantiate(type: SampleCollectionViewController.self)
     }
     
     override func tearDown() {
