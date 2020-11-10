@@ -5,6 +5,7 @@ import PackageDescription
 
 let package = Package(
     name: "WLEmptyState",
+    platforms: [.iOS(.v13)],
     products: [
         .library(
             name: "WLEmptyState",
@@ -14,7 +15,8 @@ let package = Package(
     targets: [
         .target(
             name: "WLEmptyState",
-            dependencies: []),
+            dependencies: [],
+            resources: [.process("Assets")]),
         .testTarget(
             name: "WLEmptyStateTests",
             dependencies: ["WLEmptyState"]),

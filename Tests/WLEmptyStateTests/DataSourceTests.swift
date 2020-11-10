@@ -7,7 +7,8 @@
 //
 
 import XCTest
-import WLEmptyState
+import UIKit
+@testable import WLEmptyState
 
 class DataSourceTests: XCTestCase {
 
@@ -21,13 +22,13 @@ class DataSourceTests: XCTestCase {
         let defaultTableViewController = DefaultTableViewController()
         
         let titleDataSource = defaultTableViewController.tableView.emptyStateDataSource?.titleForEmptyDataSet()
-        XCTAssertEqual(DefaultDataSource.title, titleDataSource)
+        XCTAssertEqual(DefaultEmptyState.title, titleDataSource)
         
         let descriptionDataSource = defaultTableViewController.tableView.emptyStateDataSource?.descriptionForEmptyDataSet()
-        XCTAssertEqual(DefaultDataSource.description, descriptionDataSource)
+        XCTAssertEqual(DefaultEmptyState.description, descriptionDataSource)
         
         let imageDataSource = defaultTableViewController.tableView.emptyStateDataSource?.imageForEmptyDataSet()
-        XCTAssertEqual(DefaultDataSource.image, imageDataSource)
+        XCTAssertEqual(DefaultEmptyState.image, imageDataSource)
         XCTAssertNotNil(imageDataSource)
     }
     
@@ -35,14 +36,14 @@ class DataSourceTests: XCTestCase {
         let defaultCollectionViewController = DefaultCollectionViewController(collectionViewLayout: UICollectionViewFlowLayout())
         
         let titleDataSource = defaultCollectionViewController.collectionView.emptyStateDataSource?.titleForEmptyDataSet()
-        XCTAssertEqual(DefaultDataSource.title, titleDataSource)
+        XCTAssertEqual(DefaultEmptyState.title, titleDataSource)
         
         let descriptionDataSource = defaultCollectionViewController.collectionView.emptyStateDataSource?.descriptionForEmptyDataSet()
-        XCTAssertEqual(DefaultDataSource.description, descriptionDataSource)
+        XCTAssertEqual(DefaultEmptyState.description, descriptionDataSource)
         
         let imageDataSource = defaultCollectionViewController.collectionView.emptyStateDataSource?.imageForEmptyDataSet()
         
-        XCTAssertEqual(DefaultDataSource.image, imageDataSource)
+        XCTAssertEqual(DefaultEmptyState.image, imageDataSource)
         XCTAssertNotNil(imageDataSource)
     }
     
