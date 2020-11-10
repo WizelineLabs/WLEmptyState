@@ -39,9 +39,15 @@ public protocol WLEmptyStateDataSource: class {
 public extension WLEmptyStateDataSource {
     
     func imageForEmptyDataSet() -> UIImage? {
-        guard let url = (Bundle(for: WLEmptyState.self)).url(forResource: "WLEmptyState", withExtension: "bundle"),
-            let bundle = Bundle(url: url) else { return nil }
-        let image = UIImage(named: EmptyStateView.DefaultConstants.image, in: bundle, compatibleWith: nil)
+        #if SWIFT_PACKAGE
+            let resourceBundle = Bundle.module
+        #else
+            guard let url = (Bundle(for: WLEmptyState.self)).url(forResource: "WLEmptyState", withExtension: "bundle"),
+                  let resourceBundle = Bundle(url: url) else {
+                return nil
+            }
+        #endif
+        let image = UIImage(named: EmptyStateView.DefaultConstants.image, in: resourceBundle, compatibleWith: nil)
         return image
     }
     
