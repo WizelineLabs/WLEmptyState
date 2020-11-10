@@ -16,7 +16,7 @@ let package = Package(
         .target(
             name: "WLEmptyState",
             dependencies: [],
-            resources: [.process("Assets")]),
+            exclude: ["Example", "README.md", "vendor"]),
         .testTarget(
             name: "WLEmptyStateTests",
             dependencies: ["WLEmptyState"]),

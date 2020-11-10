@@ -60,15 +60,7 @@ public extension WLEmptyStateDataSource {
 enum DefaultEmptyState {
     
     static var image: UIImage? {
-        #if SWIFT_PACKAGE
-            let resourceBundle = Bundle.module
-        #else
-            guard let url = (Bundle(for: WLEmptyState.self)).url(forResource: "WLEmptyState", withExtension: "bundle"),
-                  let resourceBundle = Bundle(url: url) else {
-                return nil
-            }
-        #endif
-        return UIImage(named: EmptyStateView.DefaultConstants.image, in: resourceBundle, compatibleWith: nil)
+        return UIImage(systemName: "info.circle")
     }
     
     static var title: NSAttributedString {
