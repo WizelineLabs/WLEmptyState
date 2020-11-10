@@ -15,6 +15,7 @@
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		617E960222724CCC006F6025 /* SampleCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617E960122724CCC006F6025 /* SampleCollectionViewController.swift */; };
 		7A05C45B22C6B65D001AAD97 /* UICollectionViewMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3CAFE322C592F100F6FD40 /* UICollectionViewMocks.swift */; };
+		7A21B5FF255A1B9D00D08C96 /* UIColor+Example.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A21B5FE255A1B9D00D08C96 /* UIColor+Example.swift */; };
 		7A53B06A227F76C1007718E3 /* UIViewController+Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A53B069227F76C1007718E3 /* UIViewController+Storyboard.swift */; };
 		7A60354D2214DB2B000265EC /* DataSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A60354C2214DB2B000265EC /* DataSourceTests.swift */; };
 		7A6035502214DC7E000265EC /* UITableViewMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A60354E2214DBBF000265EC /* UITableViewMocks.swift */; };
@@ -46,6 +47,7 @@
 		607FACE51AFB9204008FA782 /* WLEmptyState_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WLEmptyState_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		617E960122724CCC006F6025 /* SampleCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleCollectionViewController.swift; sourceTree = "<group>"; };
+		7A21B5FE255A1B9D00D08C96 /* UIColor+Example.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Example.swift"; sourceTree = "<group>"; };
 		7A3CAFE322C592F100F6FD40 /* UICollectionViewMocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewMocks.swift; sourceTree = "<group>"; };
 		7A53B069227F76C1007718E3 /* UIViewController+Storyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Storyboard.swift"; sourceTree = "<group>"; };
 		7A60354C2214DB2B000265EC /* DataSourceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSourceTests.swift; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 		607FACD21AFB9204008FA782 /* Example for WLEmptyState */ = {
 			isa = PBXGroup;
 			children = (
+				7A21B602255A1BA500D08C96 /* Extension */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* SampleTableViewController.swift */,
 				617E960122724CCC006F6025 /* SampleCollectionViewController.swift */,
@@ -175,6 +178,14 @@
 				B74778E7129E0F66D73E60E0 /* LICENSE */,
 			);
 			name = "Podspec Metadata";
+			sourceTree = "<group>";
+		};
+		7A21B602255A1BA500D08C96 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				7A21B5FE255A1B9D00D08C96 /* UIColor+Example.swift */,
+			);
+			name = Extension;
 			sourceTree = "<group>";
 		};
 		7A3CAFE222C592D200F6FD40 /* Mocks */ = {
@@ -376,6 +387,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A21B5FF255A1B9D00D08C96 /* UIColor+Example.swift in Sources */,
 				607FACD81AFB9204008FA782 /* SampleTableViewController.swift in Sources */,
 				617E960222724CCC006F6025 /* SampleCollectionViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
