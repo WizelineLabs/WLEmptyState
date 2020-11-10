@@ -15,8 +15,8 @@ final class SampleTableViewController: UITableViewController, WLEmptyStateDataSo
         tableView.emptyStateDataSource = self
     }
     
-//    func imageForEmptyDataSet() -> UIImage? {
-//        return UIImage(named: "list_icon")
-//    }
-//    
+    func imageForEmptyDataSet() -> UIImage? {
+        return UIImage(named: "list_icon")
+    }
+    
 }
