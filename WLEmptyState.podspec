@@ -15,6 +15,6 @@ Pod::Spec.new do |s|
   s.source_files = 'Sources/WLEmptyState/Classes/**/*'
 
   s.resource_bundles = {
-      'WLEmptyState' => ['Sources/WLEmptyState/Assets/Assets.xcassets']
+      'WLEmptyState' => ['Sources/WLEmptyState/Assets/*']
   }
 end
