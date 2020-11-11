@@ -32,7 +32,7 @@ class SnapshotTests: FBSnapshotTestCase {
     }
     
     func testEmptySampleTableViewController() {
-        UIApplication.shared.keyWindow?.rootViewController = sampleTableViewController
+        UIApplication.shared.windows.first(where: { $0.isKeyWindow })?.rootViewController = sampleTableViewController
         guard let sampleTableViewController = sampleTableViewController else {
             XCTFail("sampleTableViewController is nil, unable to perform snapshot test")
             return
@@ -41,7 +41,7 @@ class SnapshotTests: FBSnapshotTestCase {
     }
     
     func testEmptySampleCollectionViewController() {
-        UIApplication.shared.keyWindow?.rootViewController = sampleCollectionViewController
+        UIApplication.shared.windows.first(where: { $0.isKeyWindow })?.rootViewController = sampleCollectionViewController
         guard let sampleCollectionViewController = sampleCollectionViewController else {
             XCTFail("sampleCollectionViewController is nil, unable to perform snapshot test")
             return

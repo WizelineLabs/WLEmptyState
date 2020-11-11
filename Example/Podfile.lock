@@ -1,8 +1,8 @@
 PODS:
-  - iOSSnapshotTestCase (5.0.2):
-    - iOSSnapshotTestCase/SwiftSupport (= 5.0.2)
-  - iOSSnapshotTestCase/Core (5.0.2)
-  - iOSSnapshotTestCase/SwiftSupport (5.0.2):
+  - iOSSnapshotTestCase (6.2.0):
+    - iOSSnapshotTestCase/SwiftSupport (= 6.2.0)
+  - iOSSnapshotTestCase/Core (6.2.0)
+  - iOSSnapshotTestCase/SwiftSupport (6.2.0):
     - iOSSnapshotTestCase/Core
   - WLEmptyState (3.1.0)
 
@@ -19,9 +19,9 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  iOSSnapshotTestCase: 2d51aa06775e95cecb0a1fb9c5c159ccd1dd4596
-  WLEmptyState: 2bbb3970f62c0b9252029d34a8f74cb3d436eeea
+  iOSSnapshotTestCase: 9ab44cb5aa62b84d31847f40680112e15ec579a6
+  WLEmptyState: fcb86b1c22ea85558c8ddb8433fbce245da7088c
 
-PODFILE CHECKSUM: 5fd6a2332b7cd50dfecaf0807164322168c50c78
+PODFILE CHECKSUM: ad1d28bf7e2a760d41cb680f1f9fef030316ec0b
 
 COCOAPODS: 1.8.4
