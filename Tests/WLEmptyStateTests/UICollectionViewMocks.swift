@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 import WLEmptyState
 
 // MARK: Default Empty State on UICollectionView

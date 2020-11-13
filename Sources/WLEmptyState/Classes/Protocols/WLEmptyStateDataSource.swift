@@ -39,24 +39,36 @@ public protocol WLEmptyStateDataSource: class {
 public extension WLEmptyStateDataSource {
     
     func imageForEmptyDataSet() -> UIImage? {
-        guard let url = (Bundle(for: WLEmptyState.self)).url(forResource: "WLEmptyState", withExtension: "bundle"),
-            let bundle = Bundle(url: url) else { return nil }
-        let image = UIImage(named: EmptyStateView.DefaultConstants.image, in: bundle, compatibleWith: nil)
-        return image
+        DefaultEmptyState.image
     }
     
     func titleForEmptyDataSet() -> NSAttributedString {
-        let title = NSAttributedString(string: EmptyStateView.DefaultConstants.title, attributes: [NSAttributedString.Key.font: UIFont.preferredFont(forTextStyle: .headline)])
-        return title
+        DefaultEmptyState.title
     }
     
     func descriptionForEmptyDataSet() -> NSAttributedString {
-        let description = NSAttributedString(string: EmptyStateView.DefaultConstants.description, attributes: [NSAttributedString.Key.font: UIFont.preferredFont(forTextStyle: .caption1)])
-        return description
+        DefaultEmptyState.description
     }
     
     func customViewForEmptyState() -> UIView? {
         return nil
+    }
+    
+}
+
+
+enum DefaultEmptyState {
+    
+    static var image: UIImage? {
+        return UIImage(systemName: "info.circle")
+    }
+    
+    static var title: NSAttributedString {
+        NSAttributedString(string: EmptyStateView.DefaultConstants.title, attributes: [NSAttributedString.Key.font: UIFont.preferredFont(forTextStyle: .headline)])
+    }
+    
+    static var description: NSAttributedString {
+        NSAttributedString(string: EmptyStateView.DefaultConstants.description, attributes: [NSAttributedString.Key.font: UIFont.preferredFont(forTextStyle: .caption1)])
     }
     
 }
