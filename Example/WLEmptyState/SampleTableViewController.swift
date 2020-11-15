@@ -16,7 +16,7 @@ final class SampleTableViewController: UITableViewController, WLEmptyStateDataSo
     }
     
     func imageForEmptyDataSet() -> UIImage? {
-        return UIImage(named: "list_icon")
+        UIImage(named: "list_icon")?.withTintColor(.accent)
     }
     
 }

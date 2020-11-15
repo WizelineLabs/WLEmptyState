@@ -17,7 +17,7 @@ public protocol WLEmptyStateDelegate: class {
 public extension WLEmptyStateDelegate {
     
     func enableScrollForEmptyState() -> Bool {
-        return DefaultConstants.enableScrollForEmptyState
+        DefaultConstants.enableScrollForEmptyState
     }
     
 }

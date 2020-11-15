@@ -59,12 +59,12 @@ extension WLEmptyStateProtocol {
     }
     
     private func getNumberOfSections() -> Int {
-        return (self as? UITableView).flatMap { $0.dataSource?.numberOfSections?(in: $0) } ??
+        (self as? UITableView).flatMap { $0.dataSource?.numberOfSections?(in: $0) } ??
             (self as? UICollectionView).flatMap { $0.dataSource?.numberOfSections?(in: $0) } ?? 1
     }
     
     private func getNumberOfItems(in section: Int) -> Int {
-        return (self as? UITableView).flatMap { $0.dataSource?.tableView($0, numberOfRowsInSection: section) } ??
+        (self as? UITableView).flatMap { $0.dataSource?.tableView($0, numberOfRowsInSection: section) } ??
             (self as? UICollectionView).flatMap { $0.dataSource?.collectionView($0, numberOfItemsInSection: section) } ?? 1
     }
 }
