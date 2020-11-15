@@ -39,7 +39,6 @@ extension WLEmptyStateProtocol {
             guard let emptyStateView = objc_getAssociatedObject(self, &AssociatedKeys.emptyStateView) as? UIView else {
                 let emptyStateView = emptyStateDataSource?.customViewForEmptyState() ?? EmptyStateView(frame: .zero)
                 self.emptyStateView = emptyStateView
-                Logger.logInfo("Empty view created")
                 return emptyStateView
             }
             return emptyStateView
