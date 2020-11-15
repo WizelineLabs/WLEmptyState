@@ -1,9 +1,8 @@
 //
-//  UIColor+Example.swift
-//  WLEmptyState_Example
+//  UIColor+WLEmptyState.swift
+//  WLEmptyState
 //
 //  Created by Jorge Ovalle on 09/11/20.
-//  Copyright © 2020 CocoaPods. All rights reserved.
 //
 
 import UIKit

@@ -40,13 +40,13 @@ The more information you can provide, the easier it will be for us to resolve yo
 
 ### Submitting a Pull Request
 
-We maintain two permanent, protected branches: `master` and `development` also we follow the [Gitflow](https://datasift.github.io/gitflow/IntroducingGitFlow.html) branching model.
+We maintain two permanent, protected branches: `main` and `development` also we follow the [Gitflow](https://datasift.github.io/gitflow/IntroducingGitFlow.html) branching model.
 
-`master` is for the latest production available code, so any bug fixes or documentation spelling fixes should be merged into this branch.
+`main` is for the latest production available code, so any bug fixes or documentation spelling fixes should be merged into this branch.
 
 `development` is where we stage work for the *next* release, i.e., breaking API changes and related documentation updates. Contributors should gently encourage new pull-requests to point to the appropriate branch, and to rebase onto that branch if necessary.
 
-When a new version is ready to be released, please create a pull request to merge `development` into `master`, named something like "Release 10.0". Then we can have some final discussion before we merge it into `master` and push the release out to the public.
+When a new version is ready to be released, please create a pull request to merge `development` into `main`, named something like "Release 10.0". Then we can have some final discussion before we merge it into `main` and push the release out to the public.
 
 **You should submit one pull request per feature, the smaller the pull request the better chances it will be merged.**
 Enormous pull requests take a significant time to review and understand their implications on the existing codebase.

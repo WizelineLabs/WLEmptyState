@@ -7,6 +7,7 @@
 
 import Foundation
 import WLEmptyState
+import UIKit
 
 // MARK: Default Empty State on UITableView
 
@@ -65,21 +66,4 @@ final class CustomEmptyStateTableViewController: UITableViewController, WLEmptyS
         return false
     }
     
-}
-
-
-enum DefaultDataSource {
-    static let title = NSAttributedString(string: "Empty DataSet",
-                                          attributes: [NSAttributedString.Key.font: UIFont.preferredFont(forTextStyle: .headline)])
-    
-    static let description = NSAttributedString(string: "Oops There's no data.",
-                                                attributes: [NSAttributedString.Key.font: UIFont.preferredFont(forTextStyle: .caption1)])
-    
-    static let image: UIImage? = {
-        guard let url = (Bundle(for: WLEmptyState.self)).url(forResource: "WLEmptyState", withExtension: "bundle"),
-            let bundle = Bundle(url: url) else {
-                return nil
-        }
-        return UIImage(named: "Empty", in: bundle, compatibleWith: nil)
-    }()
 }

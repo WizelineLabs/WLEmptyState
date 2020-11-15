@@ -6,14 +6,15 @@
 //
 
 import Foundation
+import os.log
 
 struct Swizzler {
     
     static func swizzleMethods(for sourceClass: AnyClass?, originalSelector: Selector, swizzledSelector: Selector) {
         guard let originalMethod = class_getInstanceMethod(sourceClass, originalSelector),
             let swizzledMethod = class_getInstanceMethod(sourceClass, swizzledSelector) else {
-                Logger.logWarning("Didn't find selector to swizzle")
-                return
+            os_log(.error, "Didn't find selector to swizzle")
+            return
         }
         
         let didAddMethod = class_addMethod(sourceClass, originalSelector, method_getImplementation(swizzledMethod), method_getTypeEncoding(swizzledMethod))
