@@ -16,8 +16,7 @@ final class SampleCollectionViewController: UICollectionViewController, WLEmptyS
     }
     
     func imageForEmptyDataSet() -> UIImage? {
-        let image = UIImage(named: "grid_icon")
-        return  image?.withTintColor(.accent)
+        UIImage(named: "grid_icon")?.withTintColor(.accent)
     }
     
 }
