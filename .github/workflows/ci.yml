@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - main
-      - develop
   pull_request:
     branches:
       - '*'
@@ -30,3 +29,13 @@ jobs:
         scheme: WLEmptyState-Example
         additional_build_params: -destination "${{ matrix.destination }}"
         additional_lint_params: --private
+  SPM:
+    runs-on: macOS-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Switch to Xcode 12
+      run: sudo xcode-select --switch /Applications/Xcode_12.app
+    - name: Generate xcodeproj
+      run: swift package generate-xcodeproj
+    - name: Run tests
+      run: xcodebuild test -destination 'name=iPhone 11' -scheme 'WLEmptyState-Package' -project 'WLEmptyState.xcodeproj'
