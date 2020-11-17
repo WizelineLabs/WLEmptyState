@@ -68,6 +68,7 @@ extension UICollectionView: WLEmptyStateProtocol {
                 emptyStateView.titleLabel.attributedText = emptyStateDataSource.titleForEmptyDataSet()
                 emptyStateView.descriptionLabel.attributedText = emptyStateDataSource.descriptionForEmptyDataSet()
                 emptyStateView.image = emptyStateDataSource.imageForEmptyDataSet()
+                emptyStateView.accessibilityDescription = emptyStateDataSource.accessibilityDescriptionForEmptyDataSet()
             } else {
                 emptyStateView.translatesAutoresizingMaskIntoConstraints = false
                 NSLayoutConstraint.activate([

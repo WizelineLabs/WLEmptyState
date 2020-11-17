@@ -73,6 +73,16 @@ final class EmptyStateView: UIView {
         }
     }
     
+    var accessibilityDescription: String? {
+        get {
+            return self.containerView.accessibilityLabel
+        }
+        set {
+            self.containerView.isAccessibilityElement = (newValue != nil)
+            self.containerView.accessibilityLabel = newValue
+        }
+    }
+
     override public init(frame: CGRect) {
         super.init(frame: frame)
         
