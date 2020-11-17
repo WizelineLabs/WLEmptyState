@@ -44,6 +44,7 @@ final class EmptyStateView: UIView {
         let label = UILabel(frame: .zero)
         label.backgroundColor = .systemBackground
         label.textAlignment = .center
+        label.accessibilityTraits = [.header]
         return  label
     }()
     
