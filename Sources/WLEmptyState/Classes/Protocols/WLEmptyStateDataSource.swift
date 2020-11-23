@@ -32,6 +32,12 @@ public protocol WLEmptyStateDataSource: class {
     /// - Returns: The custom view to be used.
     func customViewForEmptyState() -> UIView?
     
+    /// Ask the data source for a localized accessibility description to be used as the `EmptyStateView` accessibilityLabel string.
+    ///
+    /// - Returns: An optional localized string describing the empty view.
+    func accessibilityDescriptionForEmptyDataSet() -> String?
+
+    
 }
 
 // MARK: - WLEmptyStateDataSource Default
@@ -54,6 +60,10 @@ public extension WLEmptyStateDataSource {
         return nil
     }
     
+    func accessibilityDescriptionForEmptyDataSet() -> String? {
+        return nil
+    }
+
 }
 
 
